@@ -99,11 +99,11 @@
     }
 }
 
-
 .buttons {
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-direction: column;
     width: 80%;
 }
 .collection-buttons {
@@ -171,7 +171,7 @@
 .rings {
     width: 80%;
     height: auto;
-    display: flex; 
+    display: flex;
     flex-wrap: wrap;
     justify-content: center;
     gap: 30px;
@@ -218,7 +218,7 @@
 }
 
 .collection-image-container:hover img {
-    transform: scale(1.2); 
+    transform: scale(1.2);
 }
 .customize {
     margin: 5%;
@@ -332,4 +332,3 @@
         font-size: 1.5rem;
     }
 }
-
