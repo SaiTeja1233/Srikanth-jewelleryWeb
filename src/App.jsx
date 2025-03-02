@@ -3,10 +3,10 @@ import Navbar from "./Navbar/Navbar";
 import "./App.css";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import Home from "./Home/Home";
-// import Collections from "./Collections/Collections";
-// import Contact from "./Conatct_Me/Contact";
-// import Blog from "./Blog/Blog";
-// import { Orders } from "./Orders/Orders";
+import Collections from "./Collections/Collections";
+import Contact from "./Conatct_Me/Contact";
+import Blog from "./Blog/Blog";
+import { Orders } from "./Orders/Orders";
 
 function App() {
     return (
@@ -16,11 +16,10 @@ function App() {
                 <Routes>
                     <Route path="/" element={<Home />} />
                     <Route path="/home" element={<Home />} />
-                    {/* <Route path="/collections" element={<Collections />} /> */}
-
-                    {/* <Route path="/blog" element={<Blog />} />
+                    <Route path="/collections" element={<Collections />} />
+                    <Route path="/blog" element={<Blog />} />
                     <Route path="/contact" element={<Contact />} />
-                    <Route path="/orders" element={<Orders />} /> */}
+                    <Route path="/orders" element={<Orders />} />
                 </Routes>
             </Router>
         </div>
