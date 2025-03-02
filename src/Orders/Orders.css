@@ -1,0 +1,145 @@
+.table_component {
+    overflow-x: auto;
+    width: 100%;
+    max-width: 100%;
+    margin: 20px auto;
+    font-family: "Arial", sans-serif; 
+}
+
+.table_component table {
+    border: 1px solid #dededf;
+    width: 100%;
+    table-layout: auto;
+    border-collapse: collapse;
+    text-align: center;
+    background: #ffffff;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    min-width: 600px;
+}
+
+.table_component caption {
+    caption-side: top;
+    text-align: center;
+    font-size: 20px;
+    font-weight: bold;
+    color: #333;
+    padding: 10px;
+}
+
+.table_component th, .table_component td {
+    border: 1px solid #dededf;
+    padding: 10px;
+    color: #000;
+    white-space: nowrap;
+}
+
+.table_component tbody tr:nth-child(even) {
+    background-color: #f8f9fa;
+}
+
+.table_component tbody tr:hover {
+    background-color: #e9ecef;
+    transition: 0.3s;
+}
+
+.order-image {
+    width: 50px;
+    height: 50px;
+    object-fit: cover;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: transform 0.3s ease-in-out;
+}
+
+.order-image:hover {
+    transform: scale(1.1);
+}
+
+.delete-btn {
+    background: #ff4d4d;
+    color: white;
+    border: none;
+    padding: 8px 12px;
+    font-size: 14px;
+    cursor: pointer;
+    border-radius: 4px;
+    transition: background 0.3s;
+}
+
+.delete-btn:hover {
+    background: #e60000;
+}
+
+.no-orders {
+    padding: 20px;
+    font-size: 18px;
+    color: #666;
+    font-style: italic;
+}
+
+.image-modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.8);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+    cursor: pointer;
+}
+
+.modal-image {
+    max-width: 90%;
+    max-height: 90%;
+    border-radius: 8px;
+}
+
+@media (max-width: 768px) {
+    .table_component {
+        width: 100%;
+        overflow-x: auto;
+    }
+
+    .table_component table {
+        min-width: 100%;
+        display: block;
+        overflow-x: auto;
+    }
+
+    .table_component thead {
+        display: none;
+    }
+
+    .table_component tbody tr {
+        display: block;
+        margin-bottom: 10px;
+        border: 1px solid #dededf;
+        border-radius: 5px;
+        padding: 10px;
+        background: #fff;
+    }
+
+    .table_component tbody td {
+        display: flex;
+        justify-content: space-between;
+        padding: 8px;
+        font-size: 14px;
+        border: none;
+        border-bottom: 1px solid #ddd;
+    }
+
+    .table_component tbody td:last-child {
+        border-bottom: none;
+    }
+
+    .table_component tbody td::before {
+        content: attr(data-label);
+        font-weight: bold;
+        text-transform: uppercase;
+        color: #333;
+    }
+}

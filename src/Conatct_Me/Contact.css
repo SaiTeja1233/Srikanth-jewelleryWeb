@@ -1,0 +1,215 @@
+.contact-container {
+    width: 100%;
+    height: auto;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.contact-header {
+    margin: 2% auto;
+    padding: 40px;
+    width: 80%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+}
+
+.contact-form-container {
+    background: white;
+    width: 50%;
+    padding: 40px 30px;
+    border-radius: 10px;
+    box-shadow: -3px -3px 7px #ffffff73, 2px 2px 5px rgba(94, 104, 121, 0.288);
+}
+
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.contact-form h2 {
+    font-size: 33px;
+    font-weight: 600;
+    margin-bottom: 20px;
+    color: #595959;
+}
+
+.input-group {
+    width: 100%;
+    margin-bottom: 15px;
+    position: relative;
+}
+
+.input-group input,
+.input-group textarea {
+    width: 90%;
+    height: 50px;
+    padding: 10px 15px;
+    font-size: 16px;
+    outline: none;
+    border: none;
+    background: #dde1e7;
+    color: #595959;
+    border-radius: 25px;
+}
+
+.input-group textarea {
+    height: 100px;
+    resize: none;
+}
+
+.input-group input:focus,
+.input-group textarea:focus {
+    box-shadow: inset 1px 1px 2px #babec3, inset -1px -1px 2px #ffffff73;
+}
+
+.button {
+    margin-top: 15px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.button button {
+    width: 90%;
+    height: 50px;
+    font-size: 18px;
+    font-weight: 600;
+    background: rgb(255, 235, 120);
+    border-radius: 25px;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    color: #595959;
+    box-shadow: 2px 2px 5px #babec3, -5px -5px 10px #ffffff73;
+    transition: 0.3s;
+}
+
+.button button:focus {
+    color: #3498db;
+    box-shadow: inset 2px 2px 5px #babec3, inset -5px -5px 10px #ffffff73;
+}
+
+.success-message {
+    color: green;
+    font-size: 16px;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.map-container {
+    width: 50%;
+    height: 520px;
+    padding-left: 20px;
+}
+
+.map-container iframe {
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+}
+.social-main {
+    width: 100%;
+    height: 30vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.social-contact {
+    width: 80%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5%;
+}
+
+.bi-whatsapp,
+.bi-envelope-at,
+.bi-instagram {
+    font-size: 6rem; 
+    color: rgb(165, 155, 101);
+    transition: color 0.3s ease;
+}
+
+/* Hover effect */
+.bi-whatsapp:hover,
+.bi-envelope-at:hover,
+.bi-instagram:hover {
+    color: gold;
+}
+.social-icon,
+.social-icon-email {
+    width: 25%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+.social-icon-email {
+    border-left: 2px solid rgb(219, 187, 2);
+    border-right: 2px solid rgb(219, 187, 2);
+}
+.social-icon h1,
+.social-icon-email h1 {
+    font-family: Georgia, serif;
+}
+
+@media (max-width: 1024px) {
+    .bi-whatsapp,
+    .bi-envelope-at,
+    .bi-instagram {
+        font-size: 4rem; 
+    }
+    .social-icon h1,
+    .social-icon-email h1 {
+        font-size: 1.6rem;
+    }
+}
+
+@media (max-width: 767px) {
+    .bi-whatsapp,
+    .bi-envelope-at,
+    .bi-instagram {
+        font-size: 3rem;
+    }
+    .social-icon h1,
+    .social-icon-email h1 {
+        font-size: 1.2rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .bi-whatsapp,
+    .bi-envelope-at,
+    .bi-instagram {
+        font-size: 2.5rem; 
+    }
+    .social-icon h1,
+    .social-icon-email h1 {
+        font-size: 0.8rem;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .contact-header {
+        flex-direction: column;
+        width: 80%;
+        padding: 20px;
+    }
+
+    .contact-form-container {
+        width: 80%;
+        border-radius: 10px;
+    }
+
+    .map-container {
+        width: 100%;
+        padding-left: 0;
+        margin-top: 20px;
+    }
+}

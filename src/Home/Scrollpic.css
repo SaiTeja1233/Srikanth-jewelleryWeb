@@ -1,0 +1,65 @@
+.image-gallery {
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+}
+
+.image-container {
+    display: flex;
+    transition: all 0.3s ease;
+    scroll-behavior: smooth;
+    flex-wrap: wrap;
+}
+
+.jewelery_svg {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0 10px;
+    padding: 20px;
+}
+
+.jewelery_svg img {
+    width: 120px;
+    height: 120px;
+    object-fit: contain;
+}
+
+.image-name {
+    margin-top: 10px;
+    font-size: 14px;
+    text-align: center;
+    color: #333;
+}
+
+@media (min-width: 787px) {
+    .image-container {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 20px;
+        padding: 20px;
+        width: 100%;
+    }
+}
+
+@media (max-width: 786px) {
+    .image-container {
+        display: flex;
+        flex-wrap: nowrap;
+        overflow-x: auto;
+        scroll-snap-type: x mandatory;
+        -webkit-overflow-scrolling: touch;
+    }
+
+    .image-gallery {
+        padding: 5px;
+    }
+
+    .image-container .jewelery_svg {
+        scroll-snap-align: start;
+    }
+
+    .mobile-scroll::-webkit-scrollbar {
+        display: none;
+    }
+}
