@@ -2,6 +2,9 @@
     width: 100%;
     overflow: hidden;
     position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .image-container {
@@ -12,6 +15,8 @@
 }
 
 .jewelery_svg {
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px,
+        rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -31,14 +36,19 @@
     text-align: center;
     color: #333;
 }
+.scroll-left-btn,
+.scroll-right-btn {
+    display: none;
+}
 
 @media (min-width: 787px) {
     .image-container {
         display: grid;
+        align-items: center;
         grid-template-columns: repeat(3, 1fr);
         gap: 20px;
-        padding: 20px;
-        width: 100%;
+        padding: 30px;
+        width: 80%;
     }
 }
 
@@ -61,5 +71,31 @@
 
     .mobile-scroll::-webkit-scrollbar {
         display: none;
+    }
+    .scroll-left-btn,
+    .scroll-right-btn {
+        display: block;
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        background: rgba(0, 0, 0, 0.5);
+        border: none;
+        cursor: pointer;
+        padding: 6px;
+        border-radius: 50%;
+        color: white;
+    }
+
+    .scroll-left-btn {
+        left: 10px;
+    }
+
+    .scroll-right-btn {
+        right: 10px;
+    }
+
+    .scroll-left-btn:hover,
+    .scroll-right-btn:hover {
+        background: rgba(0, 0, 0, 0.7);
     }
 }

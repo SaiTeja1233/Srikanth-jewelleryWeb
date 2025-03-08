@@ -2,16 +2,74 @@ import React, { useEffect } from "react";
 import "./Home.css";
 import Footer from "../Footer/Footer";
 import Scrollpic from "./Scrollpic";
+import ScrollReveal from "scrollreveal";
 
 function Home() {
     useEffect(() => {
+        // Hover play/pause effect for videos
         const videos = document.querySelectorAll(".hover-video");
-
         videos.forEach((video) => {
             video.addEventListener("mouseenter", () => video.play());
             video.addEventListener("mouseleave", () => video.pause());
         });
+
+        // Initialize ScrollReveal animations
+        ScrollReveal().reveal(".homeimg1", {
+            origin: "right",
+            distance: "100px",
+            duration: 1000,
+            delay: 200,
+            easing: "ease-in-out",
+            opacity: 0,
+        });
+
+        ScrollReveal().reveal(".homeimgTop_text", {
+            origin: "left",
+            distance: "100px",
+            duration: 1000,
+            delay: 200,
+            easing: "ease-in-out",
+            opacity: 0,
+        });
+
+        ScrollReveal().reveal(".homeimgTop_text2", {
+            origin: "left",
+            distance: "100px",
+            duration: 1000,
+            delay: 400,
+            easing: "ease-in-out",
+            opacity: 0,
+        });
+
+        ScrollReveal().reveal(".home_shopnowBtn", {
+            origin: "bottom",
+            distance: "50px",
+            duration: 1000,
+            delay: 600,
+            easing: "ease-in-out",
+            opacity: 0,
+        });
+
+        ScrollReveal().reveal(".Container2, .Container3, .Container4", {
+            opacity: 0,
+            duration: 1200,
+            distance: "50px",
+            delay: 300,
+            easing: "ease-in-out",
+            reset: true,
+        });
+
+        ScrollReveal().reveal(".hover-video", {
+            origin: "bottom",
+            distance: "50px",
+            duration: 1000,
+            delay: 500,
+            easing: "ease-in-out",
+            opacity: 0,
+            interval: 200,
+        });
     }, []);
+
     return (
         <div className="main_container">
             <div className="Container1">
@@ -24,19 +82,20 @@ function Home() {
                         yourself with timeless beauty.
                     </p>
                     <button className="home_shopnowBtn">
-                        shop now <i className="bi bi-arrow-bar-right"></i>
+                        Shop Now <i className="bi bi-arrow-bar-right"></i>
                     </button>
                 </div>
                 <div className="image1Cont">
                     <img
-                        src="homeimg1.png "
+                        src="homeimg1.png"
                         className="homeimg1"
                         alt="homeimg1"
                     />
                 </div>
             </div>
             <div className="Container2">
-                <Scrollpic/>
+                <h1>OUR COLLECTIONS</h1>
+                <Scrollpic />
             </div>
             <div className="Container3">
                 <h1>NEW COLLECTION</h1>
@@ -55,7 +114,7 @@ function Home() {
                         <div className="video2_txet">
                             <div className="video1_text">
                                 <h1>Where luxury meets craftsmanship</h1>
-                                <p>explore our latest gold collection</p>
+                                <p>Explore our latest gold collection</p>
                                 <button className="shop_nowBtn">
                                     Explore Now
                                 </button>
@@ -76,7 +135,7 @@ function Home() {
                         <div className="video2_txet">
                             <div className="video1_text">
                                 <h1>Golden moments, golden memories</h1>
-                                <p> find your perfect piece today</p>
+                                <p>Find your perfect piece today</p>
                             </div>
                             <div className="video4">
                                 <video
@@ -101,9 +160,7 @@ function Home() {
                         </div>
                     </div>
                     <div className="exploreBtn-con">
-                        <button className="exploreBtn">
-                            Explore Now
-                        </button>
+                        <button className="exploreBtn">Explore Now</button>
                     </div>
                 </div>
             </div>

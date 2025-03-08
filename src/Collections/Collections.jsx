@@ -18,6 +18,7 @@ function Collections() {
 
     const [activeIndex, setActiveIndex] = useState(null);
     const [popupData, setPopupData] = useState(null);
+    const [selectedSection, setSelectedSection] = useState("regular");
 
     const handleButtonClick = (index) => {
         setActiveIndex(index);
@@ -262,26 +263,100 @@ function Collections() {
                     )}
                     {collections[activeIndex].label === "Rings" && (
                         <div className="rings">
-                            {[
-                                "ring1.jpg",
-                                "ring2.jpg",
-                                "ring3.jpg",
-                                "ring4.jpg",
-                                "ring5.jpg",
-                                "ring6.jpg",
-                            ].map((imgSrc, idx) => (
-                                <div className="rings-container" key={idx}>
-                                    <div className="collection-image-container">
-                                        <img src={imgSrc} alt="" />
+                            {/* Switch Button */}
+                            <div className="switch-container">
+                                <button
+                                    className={`switch-button ${
+                                        selectedSection === "regular"
+                                            ? "active"
+                                            : ""
+                                    }`}
+                                    onClick={() =>
+                                        setSelectedSection("regular")
+                                    }
+                                >
+                                    Regular Rings
+                                </button>
+                                <button
+                                    className={`switch-button ${
+                                        selectedSection === "engagement"
+                                            ? "active"
+                                            : ""
+                                    }`}
+                                    onClick={() =>
+                                        setSelectedSection("engagement")
+                                    }
+                                >
+                                    Engagement Rings
+                                </button>
+                            </div>
+
+                            {/* Regular Rings Section */}
+                            {selectedSection === "regular" && (
+                                <>
+                                    <div className="regular-rings">
+                                        {[
+                                            "ring1.jpg",
+                                            "ring2.jpg",
+                                            "ring3.jpg",
+                                            "ring4.jpg",
+                                            "ring5.jpg",
+                                            "ring6.jpg",
+                                        ].map((imgSrc, idx) => (
+                                            <div
+                                                className="rings-container"
+                                                key={idx}
+                                            >
+                                                <div className="collection-image-container">
+                                                    <img src={imgSrc} alt="" />
+                                                </div>
+                                                <button
+                                                    className="customize"
+                                                    onClick={() =>
+                                                        openPopup(imgSrc)
+                                                    }
+                                                >
+                                                    Customize
+                                                </button>
+                                            </div>
+                                        ))}
                                     </div>
-                                    <button
-                                        className="customize"
-                                        onClick={() => openPopup(imgSrc)}
-                                    >
-                                        Costomize
-                                    </button>
-                                </div>
-                            ))}
+                                </>
+                            )}
+
+                            {/* Engagement Rings Section */}
+                            {selectedSection === "engagement" && (
+                                <>
+                                    <div className="engagement-rings-container">
+                                        {[
+                                            "ring7.jpg",
+                                            "ring8.jpg",
+                                            "ring9.jpg",
+                                            "ring10.jpg",
+                                            "ring11.jpg",
+                                            "ring12.jpg",
+                                            "ring13.jpg",
+                                        ].map((imgSrc, idx) => (
+                                            <div
+                                                className="rings-container"
+                                                key={idx}
+                                            >
+                                                <div className="collection-image-container">
+                                                    <img src={imgSrc} alt="" />
+                                                </div>
+                                                <button
+                                                    className="customize"
+                                                    onClick={() =>
+                                                        openPopup(imgSrc)
+                                                    }
+                                                >
+                                                    Customize
+                                                </button>
+                                            </div>
+                                        ))}
+                                    </div>
+                                </>
+                            )}
                         </div>
                     )}
                 </div>
@@ -290,7 +365,9 @@ function Collections() {
                 <div className="popup-overlay">
                     <div className="popup-content">
                         <button className="close-btn" onClick={closePopup}>
-                            <i className="bi bi-x-lg"></i>
+                  <i className="bi bi-x-lg" style={{ fontWeight: 600 }}></i>
+
+
                         </button>
                         <div className="popup-body">
                             <div className="popup-image">

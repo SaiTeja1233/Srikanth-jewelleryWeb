@@ -4,5 +4,9 @@
 }
 body {
     width: 100%;
-    background-color: hsl(48, 61%, 90%);
+    min-height: 100vh;
+    background: linear-gradient(135deg, #f6d365, #fda085);
+    background-attachment: fixed;
+    color: #4a3f35;
+    font-family: "Poppins", sans-serif;
 }

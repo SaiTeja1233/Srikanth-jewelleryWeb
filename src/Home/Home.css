@@ -1,3 +1,11 @@
+.homeimg1,
+.homeimgTop_text,
+.homeimgTop_text2,
+.home_shopnowBtn,
+.hover-video {
+    visibility: hidden;
+}
+
 .main_container {
     padding-top: 2%;
     display: flex;
@@ -43,7 +51,7 @@
 
 .homeimgTop_text {
     font-family: "Playfair Display", serif;
-    font-size: 2rem; 
+    font-size: 2rem;
     font-weight: 700;
     text-transform: uppercase;
     letter-spacing: 2px;
@@ -106,17 +114,26 @@
 
 .Container2 {
     height: auto;
-    width: 100%;
+    width: 80%;
     display: flex;
     justify-content: center;
     align-items: center;
-    /* gap: 5%; */
-    /* overflow: hidden; */
+    flex-direction: column;
+    /* border: 1px solid; */
+    padding: 3%;
+}
+.Container2 {
+    font-family: "Playfair Display", serif;
+    font-size: 1rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: black;
 }
 .Container3 {
     width: 100%;
     height: auto;
-    padding: 5% 0 5% 0;  
+    padding: 5% 0 5% 0;
     display: flex;
     align-items: center;
     flex-direction: column;
@@ -339,7 +356,7 @@
         width: 20%;
         height: 20vh;
     }
-    
+
     .text {
         letter-spacing: 1px;
         font-size: 0.9rem;
@@ -403,7 +420,7 @@
     .video1_2_text_container3,
     .video3_4_text_container3 {
         height: auto;
-        flex-direction: column; 
+        flex-direction: column;
         align-items: center;
     }
 
@@ -414,14 +431,14 @@
         align-items: center;
         justify-content: center;
         height: 60vh;
-        width: 100%; 
+        width: 100%;
         margin-bottom: 10px;
     }
 
     .video2_txet,
     .video1_text {
         width: 100%;
-        text-align: center; 
+        text-align: center;
     }
 }
 
