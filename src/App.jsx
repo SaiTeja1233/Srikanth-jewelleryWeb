@@ -1,27 +1,16 @@
 import React from "react";
-import Navbar from "./Navbar/Navbar";
-import "./App.css";
-import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
-import Home from "./Home/Home";
-import Collections from "./Collections/Collections";
-import Contact from "./Conatct_Me/Contact";
-import Blog from "./Blog/Blog";
-import { Orders } from "./Orders/Orders";
+import "./App.css"; // Make sure this CSS file exists
 
 function App() {
     return (
-        <div className="App">
-            <Router>
-                <Navbar />
-                <Routes>
-                    <Route path="/" element={<Home />} />
-                    <Route path="/home" element={<Home />} />
-                    <Route path="/collections" element={<Collections />} />
-                    <Route path="/blog" element={<Blog />} />
-                    <Route path="/contact" element={<Contact />} />
-                    <Route path="/orders" element={<Orders />} />
-                </Routes>
-            </Router>
+        <div className="coming-soon-container">
+            <div className="coming-soon-content">
+                <h1 className="coming-soon-title">Coming Soon</h1>
+                <p className="coming-soon-message">
+                    We're preparing to launch our new site. Stay tuned for
+                    something special.
+                </p>
+            </div>
         </div>
     );
 }
