@@ -1,4 +1,4 @@
-import React from "react";
+import react from "react";
 import "./App.css"; // Make sure this CSS file exists
 
 function App() {
