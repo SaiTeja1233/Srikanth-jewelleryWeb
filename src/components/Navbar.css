@@ -1,8 +1,8 @@
-/* Navbar.css */
 
-/* 1. STICKY BEHAVIOR */
+
+
 .navbar1 {
-    position: fixed; /* Keep it sticky at the top */
+    position: fixed; 
     top: 0;
     left: 0;
     width: 100%;
@@ -16,14 +16,14 @@
     opacity: 1;
 }
 
-/* When navbar is hidden (while scrolling) */
+
 .navbar1.hidden {
     transform: translateY(-100%);
     opacity: 0;
     pointer-events: none;
 }
 
-/* When navbar is visible (when scrolling stops) */
+
 .navbar1.visible {
     transform: translateY(0);
     opacity: 1;
@@ -38,7 +38,7 @@
     -webkit-backdrop-filter: blur(15px);
 }
 
-/* Ensure navbar is always visible when menu is open */
+
 .navbar-links-mobile.open {
     right: 0 !important;
     pointer-events: all !important;
@@ -53,7 +53,7 @@
     align-items: center;
 }
 
-/* 2. LOGO ALIGNMENT */
+
 .logo-name {
     display: flex;
     flex-direction: column;
@@ -77,7 +77,7 @@
     font-family: "Cormorant Garamond", serif;
 }
 
-/* 3. DESKTOP LINKS - PERFECTLY ALIGNED */
+
 .navbar-links-desktop {
     display: flex;
     align-items: center;
@@ -107,7 +107,7 @@
     color: #ecad29;
 }
 
-/* 4. DESKTOP CATEGORIES DROPDOWN */
+
 .categories-item {
     position: relative;
 }
@@ -202,7 +202,7 @@
     flex: 1;
 }
 
-/* 5. LOGIN BUTTON STYLE */
+
 .navbar-auth {
     margin-left: 10px;
 }
@@ -237,7 +237,7 @@
     background: rgba(255, 255, 255, 0.1);
 }
 
-/* 6. MOBILE MENU OVERLAY - PROFESSIONAL DESIGN */
+
 .navbar-links-mobile {
     position: fixed;
     top: 0;
@@ -256,7 +256,7 @@
     right: 0;
 }
 
-/* Mobile Menu Header */
+
 .mobile-menu-header {
     display: flex;
     justify-content: space-between;
@@ -303,7 +303,7 @@
     transform: rotate(90deg);
 }
 
-/* Mobile Menu Content */
+
 .mobile-menu-content {
     flex: 1;
     display: flex;
@@ -311,7 +311,7 @@
     padding: 20px;
 }
 
-/* Mobile Links Section */
+
 .mobile-links-section {
     margin-bottom: 30px;
 }
@@ -352,7 +352,7 @@
     flex: 1;
 }
 
-/* Mobile Categories Toggle */
+
 .mobile-categories-toggle {
     display: flex;
     align-items: center;
@@ -379,7 +379,7 @@
     transition: transform 0.3s ease;
 }
 
-/* Mobile Categories Dropdown - Always Visible */
+
 .mobile-categories-dropdown {
     background: rgba(0, 0, 0, 0.9);
     border: 1px solid rgba(236, 173, 41, 0.2);
@@ -467,7 +467,7 @@
     line-height: 1.2;
 }
 
-/* Mobile Auth Section */
+
 .mobile-auth-section {
     background: rgba(236, 173, 41, 0.1);
     border: 1px solid rgba(236, 173, 41, 0.2);
@@ -528,7 +528,7 @@
     background: rgba(255, 255, 255, 0.2);
 }
 
-/* HAMBURGER */
+
 .hamburger {
     display: none;
     flex-direction: column;
@@ -557,7 +557,7 @@
     transform: rotate(-45deg) translate(6px, -6px);
 }
 
-/* RESPONSIVE */
+
 @media (max-width: 992px) {
     .navbar-links-desktop {
         display: none;
@@ -617,5 +617,4 @@
     }
 }
 
-/* Add font imports */
 @import url("https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Cormorant+Garamond:wght@300;400;600;700&display=swap");

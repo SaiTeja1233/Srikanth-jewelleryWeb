@@ -1,7 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Oswald:wght@600&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Cormorant+Garamond:wght@300;400;600;700&display=swap");
 
-/* ===== RESET & GLOBAL STYLES ===== */
+
 * {
     margin: 0;
     padding: 0;
@@ -19,7 +19,7 @@ html {
     width: 100%;
 }
 
-/* ===== HERO SLIDER SECTION ===== */
+
 .timed-cards-container {
     width: 100vw;
     height: 100vh;
@@ -65,7 +65,7 @@ html {
     text-overflow: ellipsis;
 }
 
-/* ===== HERO DETAILS TEXT ===== */
+
 .details {
     position: absolute;
     left: 8%;
@@ -112,7 +112,7 @@ html {
     color: black;
 }
 
-/* ===== SRIKANTH JEWELLERY PROMO SECTION ===== */
+
 .jewellery-promo-section {
     padding: 50px 0;
     background: #faf8f5;
@@ -194,7 +194,7 @@ html {
     color: #444;
 }
 
-/* Promo Stats - Always side by side */
+
 .promo-stats {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -236,7 +236,7 @@ html {
     margin-top: 30px;
 }
 
-/* Video Container */
+
 .promo-video-container {
     position: relative;
     border-radius: 20px;
@@ -306,7 +306,7 @@ html {
     100% { transform: rotate(360deg); }
 }
 
-/* ===== JEWELLERY COLLECTIONS SECTION ===== */
+
 .jewellery-home-section {
     padding: 50px 0;
     background: #fff;
@@ -334,7 +334,7 @@ html {
     margin: 0 auto;
 }
 
-/* Jewellery Grid */
+
 .jewellery-home-grid {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
@@ -360,7 +360,7 @@ html {
     box-shadow: 0 15px 35px rgba(0, 0, 0, 0.12);
 }
 
-/* Image Wrapper */
+
 .jewellery-image-wrapper {
     height: 200px;
     position: relative;
@@ -378,12 +378,12 @@ html {
     transform: scale(1.05);
 }
 
-/* Badges - REMOVED */
+
 .jewellery-badge {
     display: none;
 }
 
-/* Overlay */
+
 .jewellery-overlay {
     position: absolute;
     top: 0;
@@ -411,7 +411,7 @@ html {
     letter-spacing: 1px;
 }
 
-/* Content */
+
 .jewellery-home-content {
     padding: 20px;
     flex: 1;
@@ -439,13 +439,13 @@ html {
 
 .jewellery-home-footer {
     display: flex;
-    justify-content: flex-end; /* Changed from space-between to flex-end */
+    justify-content: flex-end; 
     align-items: center;
     padding-top: 15px;
     border-top: 1px solid #eee;
 }
 
-/* Price Section - REMOVED */
+
 .jewellery-home-price {
     display: none;
 }
@@ -471,7 +471,7 @@ html {
     transform: translateY(-2px);
 }
 
-/* Explore All Button */
+
 .explore-all-section {
     text-align: center;
     padding-top: 20px;
@@ -514,7 +514,7 @@ html {
     background: #000;
     z-index: 200;
 }
-/* ===== HORIZONTAL BANNER SECTION WITH LEFT DARK BACKGROUND ===== */
+
 .horizontal-banner-section {
     padding: 0;
     background: #000;
@@ -531,9 +531,9 @@ html {
 
 .horizontal-banner-img {
     width: 100%;
-    height: 120%; /* Increased height to show more of image */
+    height: 120%; 
     object-fit: cover;
-    object-position: center 30%; /* Adjusted to show more of the top (30% from top) */
+    object-position: center 30%; 
     transition: transform 0.7s ease;
 }
 
@@ -541,7 +541,7 @@ html {
     transform: scale(1.05);
 }
 
-/* Left-side dark overlay */
+
 .left-dark-overlay {
     position: absolute;
     top: 0;
@@ -598,7 +598,7 @@ html {
     letter-spacing: 0.5px;
 }
 
-/* Gold accent line */
+
 .quote-line-1::after {
     content: '';
     position: absolute;
@@ -608,8 +608,8 @@ html {
     height: 2px;
     background: linear-gradient(90deg, #d4af37, transparent);
 }
-//* Sliver Container Section Styles */
-/* Main container */
+
+
 .sliver-container-section {
     margin: 80px 0;
     position: relative;
@@ -618,7 +618,7 @@ html {
     background-color: #000;
 }
 
-/* Image container - ensures full image visibility on all screens */
+
 .sliver-container-image {
     position: relative;
     width: 100%;
@@ -626,23 +626,23 @@ html {
     overflow: hidden;
 }
 
-/* Image styling - UPDATED for perfect full image display on ALL screens */
+
 .sliver-container-img {
     width: 100%;
     height: 100%;
-    object-fit: contain; /* Changed from cover to contain */
+    object-fit: contain; 
     object-position: center center;
-    background-color: #000; /* Black background for letterboxing if needed */
+    background-color: #000; 
     transition: transform 0.8s ease;
     display: block;
 }
 
-/* Optional hover effect */
+
 .sliver-container-image:hover .sliver-container-img {
-    transform: scale(1.02); /* Reduced scale for contain */
+    transform: scale(1.02); 
 }
 
-/* Content overlay - positioned on the right */
+
 .sliver-container-content {
     position: absolute;
     top: 0;
@@ -656,13 +656,13 @@ html {
     z-index: 2;
 }
 
-/* Text container */
+
 .sliver-container-text {
     width: 100%;
     max-width: 500px;
 }
 
-/* Quote box styling */
+
 .sliver-quote {
     padding: 40px;
     background: rgba(0, 0, 0, 0.142);
@@ -674,7 +674,7 @@ html {
     overflow: hidden;
 }
 
-/* Decorative corner element */
+
 .sliver-quote::before {
     content: '';
     position: absolute;
@@ -686,7 +686,7 @@ html {
     border-radius: 0 15px 0 0;
 }
 
-/* Typography */
+
 .sliver-main-title {
     font-size: 2.5rem;
     font-weight: 400;
@@ -718,7 +718,7 @@ html {
     text-align: center;
 }
 
-/* Button styling */
+
 .sliver-explore-btn {
     background: transparent;
     color: white;
@@ -756,10 +756,10 @@ html {
     transform: translateX(5px);
 }
 
-/* ===== RESPONSIVE BREAKPOINTS FOR SLIVER CONTAINER ===== */
-/* Ensures full image visibility on ALL screen sizes */
 
-/* Extra large screens (1600px and above) */
+
+
+
 @media (min-width: 1600px) {
     .sliver-container-image {
         height: 700px;
@@ -782,7 +782,7 @@ html {
     }
 }
 
-/* Large desktops (1200px - 1599px) */
+
 @media (max-width: 1200px) {
     .sliver-container-image {
         height: 550px;
@@ -809,7 +809,7 @@ html {
     }
 }
 
-/* Medium desktops (1024px - 1199px) */
+
 @media (max-width: 1024px) {
     .sliver-container-section {
         margin: 70px 0;
@@ -847,7 +847,7 @@ html {
     }
 }
 
-/* Tablets (768px - 1023px) */
+
 @media (max-width: 768px) {
     .sliver-container-section {
         margin: 60px 0;
@@ -889,7 +889,7 @@ html {
     }
 }
 
-/* Large mobile (480px - 767px) */
+
 @media (max-width: 480px) {
     .sliver-container-section {
         margin: 50px 0;
@@ -946,7 +946,7 @@ html {
     }
 }
 
-/* Small mobile (360px and below) */
+
 @media (max-width: 360px) {
     .sliver-container-image {
         height: 350px;
@@ -983,7 +983,7 @@ html {
     }
 }
 
-/* Landscape orientation for mobile */
+
 @media (max-width: 768px) and (orientation: landscape) {
     .sliver-container-image {
         height: 350px;
@@ -1018,21 +1018,21 @@ html {
     }
 }
 
-/* For tablets in landscape */
+
 @media (min-width: 1024px) and (max-width: 1366px) and (orientation: landscape) {
     .sliver-container-image {
         height: 600px;
     }
 }
 
-/* High-resolution/Retina displays */
+
 @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
     .sliver-container-img {
         image-rendering: -webkit-optimize-contrast;
     }
 }
 
-/* Optional: Add animation for content entrance */
+
 @keyframes slideIn {
     from {
         opacity: 0;
@@ -1048,27 +1048,28 @@ html {
     animation: slideIn 1s ease-out;
 }
 
-/* Ultra-wide screens (21:9 and above) */
+
+
 @media (min-width: 2000px) {
     .sliver-container-image {
         height: 800px;
     }
     
     .sliver-container-img {
-        object-fit: contain; /* Maintain contain for ultra-wide */
+        object-fit: contain; 
         max-width: 100%;
         margin: 0 auto;
     }
 }
 
-/* Fix for very short screens */
+
 @media (max-height: 600px) {
     .sliver-container-image {
         height: 400px;
     }
 }
 
-/* Fix for tablets with unusual aspect ratios */
+
 @media (min-width: 768px) and (max-width: 1024px) and (min-aspect-ratio: 4/3) {
     .sliver-container-image {
         height: 500px;
@@ -1079,15 +1080,15 @@ html {
     }
 }
 
-/* Additional fix for foldable devices */
+
 @media (max-width: 800px) and (min-aspect-ratio: 2/1) {
     .sliver-container-image {
         height: 350px;
     }
 }
-/* ===== RESPONSIVE DESIGN ===== */
 
-/* Large Desktop */
+
+
 @media (max-width: 1200px) {
     .horizontal-banner-image {
         height: 500px;
@@ -1111,7 +1112,7 @@ html {
     }
 }
 
-/* Tablet */
+
 @media (max-width: 992px) {
     .horizontal-banner-image {
         height: 450px;
@@ -1140,7 +1141,7 @@ html {
     }
 }
 
-/* Mobile */
+
 @media (max-width: 768px) {
     .horizontal-banner-image {
         height: 500px;
@@ -1151,7 +1152,7 @@ html {
         object-position: center 15%;
     }
     
-    /* Full width dark overlay on mobile */
+    
     .left-dark-overlay {
         width: 100%;
         background: linear-gradient(90deg, rgba(0, 0, 0, 0.9) 0%, rgba(0, 0, 0, 0.8) 100%);
@@ -1183,7 +1184,7 @@ html {
     }
 }
 
-/* Small Mobile */
+
 @media (max-width: 576px) {
     .horizontal-banner-image {
         height: 500px;
@@ -1212,7 +1213,7 @@ html {
     }
 }
 
-/* Extra Small Mobile */
+
 @media (max-width: 360px) {
     .horizontal-banner-image {
         height: 450px;
@@ -1236,9 +1237,9 @@ html {
     }
 }
 
-/* ===== RESPONSIVE DESIGN ===== */
 
-/* Large Desktop */
+
+
 @media (max-width: 1200px) {
     .jewellery-home-grid {
         grid-template-columns: repeat(3, 1fr);
@@ -1253,7 +1254,7 @@ html {
     }
 }
 
-/* Tablet & Small Desktop */
+
 @media (max-width: 992px) {
     .jewellery-home-grid {
         grid-template-columns: repeat(2, 1fr);
@@ -1297,9 +1298,9 @@ html {
     }
 }
 
-/* Mobile - UPDATED FOR 2x2 GRID */
+
 @media (max-width: 768px) {
-    /* Hero Section */
+    
     .details {
         top: 25%;
         width: 90%;
@@ -1317,10 +1318,10 @@ html {
         overflow: hidden;
     }
     
-    /* Jewellery Grid - UPDATED FOR 2x2 */
+    
     .jewellery-home-grid {
-        grid-template-columns: repeat(2, 1fr); /* 2 columns */
-        grid-template-rows: repeat(2, auto); /* 2 rows */
+        grid-template-columns: repeat(2, 1fr); 
+        grid-template-rows: repeat(2, auto); 
         gap: 15px;
         margin-bottom: 30px;
     }
@@ -1362,7 +1363,7 @@ html {
     
     .jewellery-home-footer {
         padding-top: 12px;
-        justify-content: center; /* Center button on mobile */
+        justify-content: center; 
     }
     
     .jewellery-explore-btn {
@@ -1372,7 +1373,7 @@ html {
         text-align: center;
     }
     
-    /* Section Header */
+    
     .section-header {
         margin-bottom: 30px;
     }
@@ -1386,14 +1387,14 @@ html {
         font-size: 1rem;
     }
     
-    /* Explore Button */
+    
     .explore-all-btn {
         padding: 14px 30px;
         font-size: 1rem;
         gap: 10px;
     }
     
-    /* Promo Section */
+    
     .promo-title {
         font-size: 2rem;
     }
@@ -1429,10 +1430,10 @@ html {
     }
 }
 
-/* Small Mobile */
+
 @media (max-width: 576px) {
     .jewellery-home-grid {
-        grid-template-columns: repeat(2, 1fr); /* Keep 2x2 grid */
+        grid-template-columns: repeat(2, 1fr); 
         gap: 12px;
     }
 
@@ -1503,10 +1504,10 @@ html {
     }
 }
 
-/* Extra Small Mobile */
+
 @media (max-width: 360px) {
     .jewellery-home-grid {
-        grid-template-columns: repeat(2, 1fr); /* Keep 2x2 grid */
+        grid-template-columns: repeat(2, 1fr); 
         gap: 10px;
     }
     
