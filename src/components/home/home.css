@@ -1,0 +1,1552 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Oswald:wght@600&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Cormorant+Garamond:wght@300;400;600;700&display=swap");
+
+/* ===== RESET & GLOBAL STYLES ===== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body,
+html {
+    overflow-x: hidden;
+    background-color: white;
+    font-family: "Inter", sans-serif;
+}
+
+.homeMain {
+    width: 100%;
+}
+
+/* ===== HERO SLIDER SECTION ===== */
+.timed-cards-container {
+    width: 100vw;
+    height: 100vh;
+    position: relative;
+    overflow: hidden;
+    background: #000;
+}
+
+.indicator {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background: #ecad29;
+    z-index: 100;
+    transform: scaleX(0);
+}
+
+.card {
+    position: absolute;
+    background-size: cover;
+    background-position: center;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+    will-change: transform, width, height;
+}
+
+.small-card-content {
+    position: absolute;
+    top: 15px;
+    left: 12px;
+    right: 12px;
+    color: white;
+}
+
+.small-title {
+    font-family: "Oswald", sans-serif;
+    font-size: 0.8rem;
+    letter-spacing: 1px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+/* ===== HERO DETAILS TEXT ===== */
+.details {
+    position: absolute;
+    left: 8%;
+    top: 42%;
+    z-index: 60;
+    color: white;
+    max-width: 450px;
+}
+
+.place-tag {
+    color: #ecad29;
+    letter-spacing: 4px;
+    font-size: 0.85rem;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+}
+
+.title-main {
+    font-family: "Oswald", sans-serif;
+    font-size: clamp(2.8rem, 10vw, 5.5rem);
+    line-height: 0.95;
+    margin-bottom: 20px;
+}
+
+.description {
+    opacity: 0.75;
+    line-height: 1.6;
+    font-size: 1rem;
+    margin-bottom: 20px;
+}
+
+.explore-btn {
+    padding: 14px 40px;
+    background: transparent;
+    border: 1px solid rgba(255, 255, 255, 0.4);
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+.explore-btn:hover {
+    background: white;
+    color: black;
+}
+
+/* ===== SRIKANTH JEWELLERY PROMO SECTION ===== */
+.jewellery-promo-section {
+    padding: 50px 0;
+    background: #faf8f5;
+    position: relative;
+    overflow: hidden;
+}
+
+.jewellery-promo-section::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, #d4af37, transparent);
+}
+
+.container {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0 8%;
+}
+
+.promo-content-wrapper {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 60px;
+    align-items: center;
+}
+
+.promo-text-content {
+    padding-right: 20px;
+}
+
+.promo-badge {
+    display: inline-block;
+    background: linear-gradient(45deg, #d4af37, #f7ef8a);
+    color: #000;
+    padding: 8px 20px;
+    border-radius: 20px;
+    font-size: 14px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    margin-bottom: 30px;
+}
+
+.promo-title {
+    font-family: "Playfair Display", serif;
+    font-size: 2.8rem;
+    font-weight: 700;
+    line-height: 1.2;
+    margin-bottom: 25px;
+    color: #1a1a1a;
+}
+
+.promo-title .highlight {
+    color: #d4af37;
+    position: relative;
+}
+
+.promo-title .highlight::after {
+    content: "";
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    width: 100%;
+    height: 3px;
+    background: linear-gradient(90deg, #d4af37, transparent);
+}
+
+.promo-description {
+    color: #555;
+    line-height: 1.7;
+}
+
+.promo-para {
+    font-family: "Cormorant Garamond", serif;
+    font-size: 1.1rem;
+    color: #444;
+}
+
+/* Promo Stats - Always side by side */
+.promo-stats {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    padding: 20px 0;
+    border-top: 1px solid #eee;
+    border-bottom: 1px solid #eee;
+    margin: 30px 0;
+}
+
+.stat-item {
+    text-align: center;
+}
+
+.stat-number {
+    display: block;
+    font-family: "Playfair Display", serif;
+    font-size: 2.2rem;
+    font-weight: 700;
+    color: #d4af37;
+    margin-bottom: 8px;
+}
+
+.stat-label {
+    font-family: "Cormorant Garamond", serif;
+    font-size: 0.9rem;
+    color: #666;
+    font-weight: 600;
+}
+
+.promo-quote {
+    font-family: "Cormorant Garamond", serif;
+    font-style: italic;
+    font-size: 1.2rem;
+    color: #333;
+    padding: 20px;
+    background: linear-gradient(90deg, rgba(212, 175, 55, 0.1), transparent);
+    border-left: 4px solid #d4af37;
+    margin-top: 30px;
+}
+
+/* Video Container */
+.promo-video-container {
+    position: relative;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+    transform: translateZ(0);
+}
+
+.video-wrapper {
+    position: relative;
+    width: 100%;
+    padding-bottom: 56.25%;
+    background: #000;
+}
+
+.promo-video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    will-change: transform;
+    filter: brightness(1.05) contrast(1.1);
+}
+
+.video-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(45deg, rgba(0, 0, 0, 0.3), rgba(212, 175, 55, 0.1));
+    pointer-events: none;
+}
+
+.video-loading {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 2;
+    transition: opacity 0.5s ease;
+}
+
+.video-loading.loaded {
+    opacity: 0;
+    pointer-events: none;
+}
+
+.loading-spinner {
+    width: 50px;
+    height: 50px;
+    border: 3px solid rgba(212, 175, 55, 0.3);
+    border-top: 3px solid #d4af37;
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+/* ===== JEWELLERY COLLECTIONS SECTION ===== */
+.jewellery-home-section {
+    padding: 50px 0;
+    background: #fff;
+    position: relative;
+}
+
+.section-header {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.section-title {
+    font-family: "Playfair Display", serif;
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: #1a1a1a;
+    margin-bottom: 15px;
+}
+
+.section-subtitle {
+    font-family: "Cormorant Garamond", serif;
+    font-size: 1.1rem;
+    color: #666;
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+/* Jewellery Grid */
+.jewellery-home-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 25px;
+    margin-bottom: 40px;
+}
+
+.jewellery-home-card {
+    background: white;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    cursor: pointer;
+    position: relative;
+    height: 350px;
+    display: flex;
+    flex-direction: column;
+}
+
+.jewellery-home-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.12);
+}
+
+/* Image Wrapper */
+.jewellery-image-wrapper {
+    height: 200px;
+    position: relative;
+    overflow: hidden;
+}
+
+.jewellery-home-image {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    transition: transform 0.5s ease;
+}
+
+.jewellery-home-card:hover .jewellery-home-image {
+    transform: scale(1.05);
+}
+
+/* Badges - REMOVED */
+.jewellery-badge {
+    display: none;
+}
+
+/* Overlay */
+.jewellery-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.7);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.jewellery-overlay.show {
+    opacity: 1;
+}
+
+.overlay-text {
+    color: white;
+    font-family: "Cormorant Garamond", serif;
+    font-size: 1.1rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+/* Content */
+.jewellery-home-content {
+    padding: 20px;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.jewellery-home-name {
+    font-family: "Playfair Display", serif;
+    font-size: 1.4rem;
+    font-weight: 700;
+    color: #1a1a1a;
+    margin-bottom: 10px;
+    line-height: 1.2;
+}
+
+.jewellery-home-description {
+    font-family: "Cormorant Garamond", serif;
+    font-size: 0.95rem;
+    color: #666;
+    margin-bottom: 20px;
+    flex: 1;
+    line-height: 1.5;
+}
+
+.jewellery-home-footer {
+    display: flex;
+    justify-content: flex-end; /* Changed from space-between to flex-end */
+    align-items: center;
+    padding-top: 15px;
+    border-top: 1px solid #eee;
+}
+
+/* Price Section - REMOVED */
+.jewellery-home-price {
+    display: none;
+}
+
+.jewellery-explore-btn {
+    padding: 10px 24px;
+    background: transparent;
+    border: 2px solid #d4af37;
+    border-radius: 6px;
+    color: #d4af37;
+    font-family: "Cormorant Garamond", serif;
+    font-size: 0.9rem;
+    font-weight: 700;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.jewellery-explore-btn:hover {
+    background: #d4af37;
+    color: white;
+    transform: translateY(-2px);
+}
+
+/* Explore All Button */
+.explore-all-section {
+    text-align: center;
+    padding-top: 20px;
+}
+
+.explore-all-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 15px;
+    padding: 16px 40px;
+    background: linear-gradient(135deg, #d4af37 0%, #f7c948 100%);
+    border: none;
+    border-radius: 8px;
+    color: black;
+    font-family: "Cormorant Garamond", serif;
+    font-size: 1.1rem;
+    font-weight: 700;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.explore-all-btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 25px rgba(212, 175, 55, 0.4);
+    gap: 20px;
+}
+
+.explore-arrow {
+    font-size: 1.2rem;
+    transition: transform 0.3s ease;
+}
+
+.explore-all-btn:hover .explore-arrow {
+    transform: translateX(5px);
+}
+
+.cover {
+    position: absolute;
+    inset: 0;
+    background: #000;
+    z-index: 200;
+}
+/* ===== HORIZONTAL BANNER SECTION WITH LEFT DARK BACKGROUND ===== */
+.horizontal-banner-section {
+    padding: 0;
+    background: #000;
+    position: relative;
+    overflow: hidden;
+}
+
+.horizontal-banner-image {
+    position: relative;
+    width: 100%;
+    height: 600px;
+    overflow: hidden;
+}
+
+.horizontal-banner-img {
+    width: 100%;
+    height: 120%; /* Increased height to show more of image */
+    object-fit: cover;
+    object-position: center 30%; /* Adjusted to show more of the top (30% from top) */
+    transition: transform 0.7s ease;
+}
+
+.horizontal-banner-section:hover .horizontal-banner-img {
+    transform: scale(1.05);
+}
+
+/* Left-side dark overlay */
+.left-dark-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 50%;
+    height: 100%;
+    background: linear-gradient(90deg, rgba(0, 0, 0, 0.374) 0%, rgba(0, 0, 0, 0.473) 50%, rgba(0, 0, 0, 0) 100%);
+    z-index: 1;
+}
+
+.horizontal-banner-content {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    z-index: 2;
+}
+
+.horizontal-banner-text {
+    padding: 0 8%;
+    max-width: 80%;
+    color: white;
+}
+
+.wedding-quote {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+    width: 80%;
+    border-radius: 1px solid white;
+}
+
+.quote-line-1 {
+    font-family: "Cormorant Garamond", serif;
+    font-size: 2.8rem;
+    font-weight: 400;
+    line-height: 1.2;
+    color: #d4af37;
+    margin: 0;
+    position: relative;
+    letter-spacing: 0.5px;
+}
+
+.quote-line-2 {
+    font-family: "Cormorant Garamond", serif;
+    font-size: 2.0rem;
+    font-weight: 100;
+    line-height: 1.1;
+    color: #fff;
+    margin: 0;
+    letter-spacing: 0.5px;
+}
+
+/* Gold accent line */
+.quote-line-1::after {
+    content: '';
+    position: absolute;
+    bottom: -15px;
+    left: 0;
+    width: 80px;
+    height: 2px;
+    background: linear-gradient(90deg, #d4af37, transparent);
+}
+//* Sliver Container Section Styles */
+/* Main container */
+.sliver-container-section {
+    margin: 80px 0;
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+    background-color: #000;
+}
+
+/* Image container - ensures full image visibility on all screens */
+.sliver-container-image {
+    position: relative;
+    width: 100%;
+    height: 600px;
+    overflow: hidden;
+}
+
+/* Image styling - UPDATED for perfect full image display on ALL screens */
+.sliver-container-img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain; /* Changed from cover to contain */
+    object-position: center center;
+    background-color: #000; /* Black background for letterboxing if needed */
+    transition: transform 0.8s ease;
+    display: block;
+}
+
+/* Optional hover effect */
+.sliver-container-image:hover .sliver-container-img {
+    transform: scale(1.02); /* Reduced scale for contain */
+}
+
+/* Content overlay - positioned on the right */
+.sliver-container-content {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 45%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-right: 5%;
+    z-index: 2;
+}
+
+/* Text container */
+.sliver-container-text {
+    width: 100%;
+    max-width: 500px;
+}
+
+/* Quote box styling */
+.sliver-quote {
+    padding: 40px;
+    background: rgba(0, 0, 0, 0.142);
+    backdrop-filter: blur(8px);
+    border-radius: 15px;
+    border-left: 4px solid #c0c0c0;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.4);
+    position: relative;
+    overflow: hidden;
+}
+
+/* Decorative corner element */
+.sliver-quote::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 80px;
+    height: 80px;
+    background: linear-gradient(135deg, rgba(192, 192, 192, 0.15), transparent);
+    border-radius: 0 15px 0 0;
+}
+
+/* Typography */
+.sliver-main-title {
+    font-size: 2.5rem;
+    font-weight: 400;
+    color: #fff;
+    letter-spacing: 3px;
+    margin-bottom: 25px;
+    text-transform: uppercase;
+    position: relative;
+    text-align: center;
+}
+
+.sliver-line-1 {
+    font-size: 1.6rem;
+    color: #f0f0f0;
+    line-height: 1.4;
+    margin-bottom: 15px;
+    font-weight: 300;
+    letter-spacing: 1px;
+    text-align: center;
+}
+
+.sliver-line-2 {
+    font-size: 1.2rem;
+    color: #d0d0d0;
+    line-height: 1.6;
+    margin-bottom: 35px;
+    font-weight: 300;
+    letter-spacing: 0.5px;
+    text-align: center;
+}
+
+/* Button styling */
+.sliver-explore-btn {
+    background: transparent;
+    color: white;
+    border: 2px solid #c0c0c0;
+    padding: 15px 40px;
+    border-radius: 30px;
+    font-size: 1rem;
+    font-weight: 600;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 15px;
+    margin-top: 20px;
+    width: 100%;
+    background: rgba(192, 192, 192, 0.1);
+}
+
+.sliver-explore-btn:hover {
+    background: #c0c0c0;
+    color: #333;
+    transform: translateY(-3px);
+    box-shadow: 0 10px 25px rgba(192, 192, 192, 0.4);
+}
+
+.sliver-arrow {
+    transition: transform 0.3s ease;
+    font-size: 1.3rem;
+}
+
+.sliver-explore-btn:hover .sliver-arrow {
+    transform: translateX(5px);
+}
+
+/* ===== RESPONSIVE BREAKPOINTS FOR SLIVER CONTAINER ===== */
+/* Ensures full image visibility on ALL screen sizes */
+
+/* Extra large screens (1600px and above) */
+@media (min-width: 1600px) {
+    .sliver-container-image {
+        height: 700px;
+    }
+    
+    .sliver-container-content {
+        width: 40%;
+    }
+    
+    .sliver-main-title {
+        font-size: 3rem;
+    }
+    
+    .sliver-line-1 {
+        font-size: 1.8rem;
+    }
+    
+    .sliver-line-2 {
+        font-size: 1.3rem;
+    }
+}
+
+/* Large desktops (1200px - 1599px) */
+@media (max-width: 1200px) {
+    .sliver-container-image {
+        height: 550px;
+    }
+    
+    .sliver-container-content {
+        width: 50%;
+    }
+    
+    .sliver-quote {
+        padding: 35px;
+    }
+    
+    .sliver-main-title {
+        font-size: 2.2rem;
+    }
+    
+    .sliver-line-1 {
+        font-size: 1.4rem;
+    }
+    
+    .sliver-line-2 {
+        font-size: 1.1rem;
+    }
+}
+
+/* Medium desktops (1024px - 1199px) */
+@media (max-width: 1024px) {
+    .sliver-container-section {
+        margin: 70px 0;
+    }
+    
+    .sliver-container-image {
+        height: 500px;
+    }
+    
+    .sliver-container-content {
+        width: 55%;
+        padding-right: 4%;
+    }
+    
+    .sliver-quote {
+        padding: 30px;
+    }
+    
+    .sliver-main-title {
+        font-size: 2rem;
+        letter-spacing: 2.5px;
+    }
+    
+    .sliver-line-1 {
+        font-size: 1.3rem;
+    }
+    
+    .sliver-line-2 {
+        font-size: 1rem;
+    }
+    
+    .sliver-explore-btn {
+        padding: 14px 35px;
+        font-size: 0.95rem;
+    }
+}
+
+/* Tablets (768px - 1023px) */
+@media (max-width: 768px) {
+    .sliver-container-section {
+        margin: 60px 0;
+    }
+    
+    .sliver-container-image {
+        height: 450px;
+    }
+    
+    .sliver-container-content {
+        width: 60%;
+        padding-right: 3%;
+    }
+    
+    .sliver-quote {
+        padding: 25px;
+    }
+    
+    .sliver-main-title {
+        font-size: 1.7rem;
+        letter-spacing: 2px;
+        margin-bottom: 20px;
+    }
+    
+    .sliver-line-1 {
+        font-size: 1.1rem;
+        margin-bottom: 12px;
+    }
+    
+    .sliver-line-2 {
+        font-size: 0.95rem;
+        margin-bottom: 25px;
+    }
+    
+    .sliver-explore-btn {
+        padding: 12px 30px;
+        font-size: 0.9rem;
+        margin-top: 15px;
+    }
+}
+
+/* Large mobile (480px - 767px) */
+@media (max-width: 480px) {
+    .sliver-container-section {
+        margin: 50px 0;
+    }
+    
+    .sliver-container-image {
+        height: 400px;
+    }
+    
+    .sliver-container-content {
+        width: 85%;
+        left: 0;
+        right: 0;
+        margin: 0 auto;
+        padding-right: 0;
+        justify-content: center;
+    }
+    
+    .sliver-container-text {
+        max-width: 100%;
+    }
+    
+    .sliver-quote {
+        padding: 20px;
+        backdrop-filter: blur(10px);
+        background: rgba(0, 0, 0, 0.2);
+    }
+    
+    .sliver-main-title {
+        font-size: 1.4rem;
+        letter-spacing: 1.5px;
+        margin-bottom: 15px;
+    }
+    
+    .sliver-line-1 {
+        font-size: 1rem;
+        margin-bottom: 10px;
+    }
+    
+    .sliver-line-2 {
+        font-size: 0.85rem;
+        margin-bottom: 20px;
+    }
+    
+    .sliver-explore-btn {
+        padding: 10px 25px;
+        font-size: 0.85rem;
+        margin-top: 12px;
+        gap: 10px;
+    }
+    
+    .sliver-arrow {
+        font-size: 1.1rem;
+    }
+}
+
+/* Small mobile (360px and below) */
+@media (max-width: 360px) {
+    .sliver-container-image {
+        height: 350px;
+    }
+    
+    .sliver-container-content {
+        width: 90%;
+    }
+    
+    .sliver-quote {
+        padding: 15px;
+    }
+    
+    .sliver-main-title {
+        font-size: 1.2rem;
+        letter-spacing: 1px;
+        margin-bottom: 12px;
+    }
+    
+    .sliver-line-1 {
+        font-size: 0.9rem;
+        margin-bottom: 8px;
+    }
+    
+    .sliver-line-2 {
+        font-size: 0.8rem;
+        margin-bottom: 15px;
+    }
+    
+    .sliver-explore-btn {
+        padding: 8px 20px;
+        font-size: 0.8rem;
+        gap: 8px;
+    }
+}
+
+/* Landscape orientation for mobile */
+@media (max-width: 768px) and (orientation: landscape) {
+    .sliver-container-image {
+        height: 350px;
+    }
+    
+    .sliver-container-content {
+        width: 70%;
+    }
+    
+    .sliver-quote {
+        padding: 15px;
+    }
+    
+    .sliver-main-title {
+        font-size: 1.3rem;
+        margin-bottom: 10px;
+    }
+    
+    .sliver-line-1 {
+        font-size: 0.9rem;
+        margin-bottom: 5px;
+    }
+    
+    .sliver-line-2 {
+        font-size: 0.8rem;
+        margin-bottom: 10px;
+    }
+    
+    .sliver-explore-btn {
+        padding: 8px 20px;
+        margin-top: 10px;
+    }
+}
+
+/* For tablets in landscape */
+@media (min-width: 1024px) and (max-width: 1366px) and (orientation: landscape) {
+    .sliver-container-image {
+        height: 600px;
+    }
+}
+
+/* High-resolution/Retina displays */
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+    .sliver-container-img {
+        image-rendering: -webkit-optimize-contrast;
+    }
+}
+
+/* Optional: Add animation for content entrance */
+@keyframes slideIn {
+    from {
+        opacity: 0;
+        transform: translateX(50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+.sliver-container-content {
+    animation: slideIn 1s ease-out;
+}
+
+/* Ultra-wide screens (21:9 and above) */
+@media (min-width: 2000px) {
+    .sliver-container-image {
+        height: 800px;
+    }
+    
+    .sliver-container-img {
+        object-fit: contain; /* Maintain contain for ultra-wide */
+        max-width: 100%;
+        margin: 0 auto;
+    }
+}
+
+/* Fix for very short screens */
+@media (max-height: 600px) {
+    .sliver-container-image {
+        height: 400px;
+    }
+}
+
+/* Fix for tablets with unusual aspect ratios */
+@media (min-width: 768px) and (max-width: 1024px) and (min-aspect-ratio: 4/3) {
+    .sliver-container-image {
+        height: 500px;
+    }
+    
+    .sliver-container-img {
+        object-fit: contain;
+    }
+}
+
+/* Additional fix for foldable devices */
+@media (max-width: 800px) and (min-aspect-ratio: 2/1) {
+    .sliver-container-image {
+        height: 350px;
+    }
+}
+/* ===== RESPONSIVE DESIGN ===== */
+
+/* Large Desktop */
+@media (max-width: 1200px) {
+    .horizontal-banner-image {
+        height: 500px;
+    }
+    
+    .horizontal-banner-img {
+        height: 110%;
+        object-position: center 25%;
+    }
+    
+    .quote-line-1 {
+        font-size: 2.5rem;
+    }
+    
+    .quote-line-2 {
+        font-size: 2.8rem;
+    }
+     .left-dark-overlay {
+        width: 100%;
+        background: linear-gradient(90deg, rgba(0, 0, 0, 0.732) 0%, rgba(0, 0, 0, 0.211) 100%);
+    }
+}
+
+/* Tablet */
+@media (max-width: 992px) {
+    .horizontal-banner-image {
+        height: 450px;
+    }
+    
+    .horizontal-banner-img {
+        height: 115%;
+        object-position: center 20%;
+    }
+    
+    .horizontal-banner-text {
+        padding: 0 5%;
+        max-width: 67%;
+    }
+    
+    .quote-line-1 {
+        font-size: 2.2rem;
+    }
+    
+    .quote-line-2 {
+        font-size: 2.5rem;
+    }
+     .left-dark-overlay {
+        width: 100%;
+        background: linear-gradient(90deg, rgba(0, 0, 0, 0.829) 0%, rgba(0, 0, 0, 0.245) 100%);
+    }
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+    .horizontal-banner-image {
+        height: 500px;
+    }
+    
+    .horizontal-banner-img {
+        height: 120%;
+        object-position: center 15%;
+    }
+    
+    /* Full width dark overlay on mobile */
+    .left-dark-overlay {
+        width: 100%;
+        background: linear-gradient(90deg, rgba(0, 0, 0, 0.9) 0%, rgba(0, 0, 0, 0.8) 100%);
+    }
+    
+    .horizontal-banner-text {
+        max-width: 68%;
+        padding: 0 20px;
+        text-align: center;
+    }
+    
+    .quote-line-1 {
+        font-size: 1.8rem;
+        text-align: center;
+    }
+    
+    .quote-line-2 {
+        font-size: 2rem;
+        text-align: center;
+    }
+    
+    .quote-line-1::after {
+        left: 50%;
+        transform: translateX(-50%);
+    }
+      .left-dark-overlay {
+        width: 100%;
+        background: linear-gradient(90deg, rgba(0, 0, 0, 0.726) 0%, rgba(0, 0, 0, 0.184) 100%);
+    }
+}
+
+/* Small Mobile */
+@media (max-width: 576px) {
+    .horizontal-banner-image {
+        height: 500px;
+    }
+    
+    .horizontal-banner-img {
+        height: 125%;
+        object-position: center 10%;
+    }
+    
+    .horizontal-banner-text {
+        max-width: 95%;
+        padding: 0 15px;
+    }
+    
+    .quote-line-1 {
+        font-size: 1.6rem;
+    }
+    
+    .quote-line-2 {
+        font-size: 1.8rem;
+    }
+    
+    .wedding-quote {
+        gap: 20px;
+    }
+}
+
+/* Extra Small Mobile */
+@media (max-width: 360px) {
+    .horizontal-banner-image {
+        height: 450px;
+    }
+    
+    .horizontal-banner-img {
+        height: 130%;
+        object-position: center 5%;
+    }
+    
+    .quote-line-1 {
+        font-size: 1.4rem;
+    }
+    
+    .quote-line-2 {
+        font-size: 1.6rem;
+    }
+    
+    .wedding-quote {
+        gap: 15px;
+    }
+}
+
+/* ===== RESPONSIVE DESIGN ===== */
+
+/* Large Desktop */
+@media (max-width: 1200px) {
+    .jewellery-home-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+    
+    .promo-content-wrapper {
+        gap: 40px;
+    }
+    
+    .promo-title {
+        font-size: 2.4rem;
+    }
+}
+
+/* Tablet & Small Desktop */
+@media (max-width: 992px) {
+    .jewellery-home-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+    }
+
+    .jewellery-home-section {
+        padding: 40px 0;
+    }
+
+    .jewellery-promo-section {
+        padding: 40px 0;
+    }
+
+    .section-title {
+        font-size: 2.2rem;
+    }
+
+    .jewellery-home-card {
+        height: 360px;
+    }
+    
+    .promo-content-wrapper {
+        grid-template-columns: 1fr;
+        gap: 40px;
+    }
+    
+    .promo-text-content {
+        padding-right: 0;
+    }
+    
+    .promo-stats {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 20px;
+        margin: 25px 0;
+        padding: 20px 0;
+    }
+    
+    .stat-number {
+        font-size: 1.8rem;
+    }
+}
+
+/* Mobile - UPDATED FOR 2x2 GRID */
+@media (max-width: 768px) {
+    /* Hero Section */
+    .details {
+        top: 25%;
+        width: 90%;
+        left: 5%;
+    }
+
+    .title-main {
+        font-size: 3.2rem;
+    }
+
+    .description {
+        display: -webkit-box;
+        -webkit-line-clamp: 3;
+        -webkit-box-orient: vertical;
+        overflow: hidden;
+    }
+    
+    /* Jewellery Grid - UPDATED FOR 2x2 */
+    .jewellery-home-grid {
+        grid-template-columns: repeat(2, 1fr); /* 2 columns */
+        grid-template-rows: repeat(2, auto); /* 2 rows */
+        gap: 15px;
+        margin-bottom: 30px;
+    }
+
+    .jewellery-home-section {
+        padding: 30px 0;
+    }
+
+    .container {
+        padding: 0 5%;
+    }
+
+    .jewellery-home-card {
+        height: 320px;
+        margin-bottom: 0;
+    }
+    
+    .jewellery-image-wrapper {
+        height: 180px;
+    }
+
+    .jewellery-home-content {
+        padding: 15px;
+    }
+
+    .jewellery-home-name {
+        font-size: 1.1rem;
+        margin-bottom: 8px;
+    }
+
+    .jewellery-home-description {
+        font-size: 0.85rem;
+        margin-bottom: 15px;
+        -webkit-line-clamp: 2;
+        display: -webkit-box;
+        -webkit-box-orient: vertical;
+        overflow: hidden;
+    }
+    
+    .jewellery-home-footer {
+        padding-top: 12px;
+        justify-content: center; /* Center button on mobile */
+    }
+    
+    .jewellery-explore-btn {
+        padding: 8px 20px;
+        font-size: 0.8rem;
+        width: 100%;
+        text-align: center;
+    }
+    
+    /* Section Header */
+    .section-header {
+        margin-bottom: 30px;
+    }
+    
+    .section-title {
+        font-size: 1.8rem;
+        margin-bottom: 10px;
+    }
+    
+    .section-subtitle {
+        font-size: 1rem;
+    }
+    
+    /* Explore Button */
+    .explore-all-btn {
+        padding: 14px 30px;
+        font-size: 1rem;
+        gap: 10px;
+    }
+    
+    /* Promo Section */
+    .promo-title {
+        font-size: 2rem;
+    }
+    
+    .promo-stats {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 15px;
+        margin: 30px 0;
+        padding: 20px 0;
+    }
+    
+    .stat-number {
+        font-size: 1.6rem;
+    }
+    
+    .stat-label {
+        font-size: 0.8rem;
+    }
+    
+    .promo-quote {
+        font-size: 1rem;
+        padding: 15px;
+        margin-top: 20px;
+    }
+    
+    .promo-para {
+        font-size: 1rem;
+    }
+    
+    .promo-video-container {
+        border-radius: 12px;
+        box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+    }
+}
+
+/* Small Mobile */
+@media (max-width: 576px) {
+    .jewellery-home-grid {
+        grid-template-columns: repeat(2, 1fr); /* Keep 2x2 grid */
+        gap: 12px;
+    }
+
+    .jewellery-home-card {
+        height: 300px;
+    }
+    
+    .jewellery-image-wrapper {
+        height: 160px;
+    }
+
+    .jewellery-home-content {
+        padding: 12px;
+    }
+    
+    .jewellery-home-name {
+        font-size: 1rem;
+    }
+    
+    .jewellery-home-description {
+        font-size: 0.8rem;
+        margin-bottom: 12px;
+    }
+    
+    .jewellery-explore-btn {
+        padding: 8px 16px;
+        font-size: 0.75rem;
+    }
+
+    .explore-all-btn {
+        padding: 12px 24px;
+        font-size: 0.9rem;
+    }
+
+    .section-title {
+        font-size: 1.6rem;
+    }
+    
+    .promo-title {
+        font-size: 1.8rem;
+    }
+    
+    .promo-stats {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 10px;
+        margin: 25px 0;
+        padding: 20px 0;
+    }
+    
+    .stat-number {
+        font-size: 1.4rem;
+    }
+    
+    .stat-label {
+        font-size: 0.75rem;
+        line-height: 1.2;
+    }
+    
+    .promo-badge {
+        padding: 6px 16px;
+        font-size: 12px;
+        margin-bottom: 20px;
+    }
+    
+    .promo-para {
+        font-size: 0.95rem;
+        margin-bottom: 20px;
+    }
+}
+
+/* Extra Small Mobile */
+@media (max-width: 360px) {
+    .jewellery-home-grid {
+        grid-template-columns: repeat(2, 1fr); /* Keep 2x2 grid */
+        gap: 10px;
+    }
+    
+    .jewellery-home-card {
+        height: 280px;
+    }
+    
+    .jewellery-image-wrapper {
+        height: 140px;
+    }
+    
+    .jewellery-home-name {
+        font-size: 0.9rem;
+    }
+    
+    .jewellery-home-description {
+        font-size: 0.75rem;
+    }
+    
+    .jewellery-explore-btn {
+        padding: 6px 12px;
+        font-size: 0.7rem;
+    }
+
+    .promo-stats {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 8px;
+        margin: 20px 0;
+        padding: 15px 0;
+    }
+
+    .stat-number {
+        font-size: 1.2rem;
+    }
+
+    .stat-label {
+        font-size: 0.7rem;
+    }
+
+    .promo-title {
+        font-size: 1.6rem;
+    }
+}

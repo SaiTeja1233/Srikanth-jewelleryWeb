@@ -1,0 +1,49 @@
+.animated-search-form {
+    position: relative;
+    flex-grow: 1;
+    height: 100%;
+}
+
+.animated-search-input {
+    width: 100%;
+    height: 100%;
+    border: none;
+    outline: none;
+    background-color: transparent;
+    padding: 0 15px 0 15px;
+    font-size: 0.95rem;
+    color: #555;
+    font-weight: 500;
+    font-family: inherit;
+}
+
+.typing-indicator {
+    position: absolute;
+    right: 70px;
+    top: 50%;
+    transform: translateY(-50%);
+    display: flex;
+    align-items: center;
+}
+
+.cursor {
+    width: 2px;
+    height: 20px;
+    background-color: #d4af37;
+    animation: blink 1s infinite;
+}
+
+.cursor.paused {
+    animation: none;
+    opacity: 0.5;
+}
+
+@keyframes blink {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0; }
+}
+
+.animated-search-input:focus + .typing-indicator .cursor {
+    animation: none;
+    opacity: 0;
+}

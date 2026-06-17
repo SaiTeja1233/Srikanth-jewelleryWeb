@@ -1,0 +1,621 @@
+/* Navbar.css */
+
+/* 1. STICKY BEHAVIOR */
+.navbar1 {
+    position: fixed; /* Keep it sticky at the top */
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    padding: 20px 8%;
+    transition: transform 0.3s ease, opacity 0.3s ease, background-color 0.3s ease;
+    background: transparent;
+    display: flex;
+    align-items: center;
+    transform: translateY(0);
+    opacity: 1;
+}
+
+/* When navbar is hidden (while scrolling) */
+.navbar1.hidden {
+    transform: translateY(-100%);
+    opacity: 0;
+    pointer-events: none;
+}
+
+/* When navbar is visible (when scrolling stops) */
+.navbar1.visible {
+    transform: translateY(0);
+    opacity: 1;
+    pointer-events: all;
+}
+
+.navbar1.scrolled {
+    background: rgba(45, 45, 45, 0.695);
+    padding: 12px 8%;
+    border-bottom: 1px solid rgba(236, 173, 41, 0.2);
+    backdrop-filter: blur(15px);
+    -webkit-backdrop-filter: blur(15px);
+}
+
+/* Ensure navbar is always visible when menu is open */
+.navbar-links-mobile.open {
+    right: 0 !important;
+    pointer-events: all !important;
+}
+
+.navbar-content {
+    width: 100%;
+    max-width: 1400px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* 2. LOGO ALIGNMENT */
+.logo-name {
+    display: flex;
+    flex-direction: column;
+    cursor: pointer;
+}
+
+.srikanth {
+    color: #ecad29;
+    font-size: 1.5rem;
+    font-weight: 800;
+    letter-spacing: 2px;
+    line-height: 1;
+    font-family: "Playfair Display", serif;
+}
+
+.jewellery-text {
+    color: white;
+    font-size: 0.7rem;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    font-family: "Cormorant Garamond", serif;
+}
+
+/* 3. DESKTOP LINKS - PERFECTLY ALIGNED */
+.navbar-links-desktop {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+}
+
+.navbar-links {
+    display: flex;
+    list-style: none;
+    gap: 30px;
+    margin: 0;
+    padding: 0;
+}
+
+.navbar-links li a {
+    color: white;
+    text-decoration: none;
+    font-size: 0.9rem;
+    font-weight: 500;
+    text-transform: uppercase;
+    transition: 0.3s;
+    font-family: "Cormorant Garamond", serif;
+    letter-spacing: 0.5px;
+}
+
+.navbar-links li a:hover {
+    color: #ecad29;
+}
+
+/* 4. DESKTOP CATEGORIES DROPDOWN */
+.categories-item {
+    position: relative;
+}
+
+.categories-link {
+    color: white;
+    text-decoration: none;
+    font-size: 0.9rem;
+    font-weight: 500;
+    text-transform: uppercase;
+    cursor: pointer;
+    letter-spacing: 0.5px;
+    transition: 0.3s;
+    font-family: "Cormorant Garamond", serif;
+}
+
+.categories-link:hover {
+    color: #ecad29;
+}
+
+.categories-dropdown {
+    position: absolute;
+    top: 100%;
+    left: -100px;
+    width: 500px;
+    background: rgba(0, 0, 0, 0.98);
+    border: 1px solid rgba(236, 173, 41, 0.3);
+    padding: 25px;
+    z-index: 1001;
+    opacity: 0;
+    transform: translateY(10px);
+    animation: dropdownFadeIn 0.3s ease forwards;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(10px);
+    border-radius: 8px;
+}
+
+@keyframes dropdownFadeIn {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.dropdown-title {
+    color: #ecad29;
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-bottom: 20px;
+    text-align: center;
+    font-family: "Playfair Display", serif;
+    border-bottom: 1px solid rgba(236, 173, 41, 0.2);
+    padding-bottom: 10px;
+}
+
+.categories-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+}
+
+.category-card {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    color: white;
+    text-decoration: none;
+    font-size: 0.85rem;
+    font-weight: 500;
+    padding: 15px;
+    border: 1px solid transparent;
+    border-radius: 6px;
+    transition: all 0.3s ease;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    font-family: "Cormorant Garamond", serif;
+}
+
+.category-card:hover {
+    color: #ecad29;
+    border-color: rgba(236, 173, 41, 0.3);
+    background: rgba(236, 173, 41, 0.1);
+    transform: translateY(-2px);
+}
+
+.category-icon {
+    font-size: 1.2rem;
+}
+
+.category-name {
+    flex: 1;
+}
+
+/* 5. LOGIN BUTTON STYLE */
+.navbar-auth {
+    margin-left: 10px;
+}
+
+.navbar-button {
+    background: transparent;
+    border: 1px solid #ecad29;
+    color: white;
+    padding: 10px 28px;
+    font-size: 0.85rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: 0.3s;
+    letter-spacing: 1px;
+    font-family: "Cormorant Garamond", serif;
+    border-radius: 4px;
+}
+
+.navbar-button.login:hover {
+    background: #ecad29;
+    color: black;
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(236, 173, 41, 0.3);
+}
+
+.navbar-button.logout {
+    border-color: rgba(255, 255, 255, 0.3);
+}
+
+.navbar-button.logout:hover {
+    background: rgba(255, 255, 255, 0.1);
+}
+
+/* 6. MOBILE MENU OVERLAY - PROFESSIONAL DESIGN */
+.navbar-links-mobile {
+    position: fixed;
+    top: 0;
+    right: -100%;
+    width: 85%;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.98);
+    transition: right 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    display: flex;
+    flex-direction: column;
+    z-index: 999;
+    overflow-y: auto;
+}
+
+.navbar-links-mobile.open {
+    right: 0;
+}
+
+/* Mobile Menu Header */
+.mobile-menu-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 25px 20px;
+    border-bottom: 1px solid rgba(236, 173, 41, 0.2);
+    background: rgba(0, 0, 0, 0.9);
+}
+
+.mobile-logo {
+    display: flex;
+    flex-direction: column;
+    cursor: pointer;
+}
+
+.mobile-logo-text {
+    color: #ecad29;
+    font-size: 1.4rem;
+    font-weight: 700;
+    letter-spacing: 2px;
+    font-family: "Playfair Display", serif;
+}
+
+.mobile-logo-subtext {
+    color: white;
+    font-size: 0.7rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-family: "Cormorant Garamond", serif;
+}
+
+.mobile-close {
+    color: white;
+    font-size: 1.8rem;
+    cursor: pointer;
+    padding: 10px;
+    transition: 0.3s;
+    opacity: 0.7;
+}
+
+.mobile-close:hover {
+    color: #ecad29;
+    opacity: 1;
+    transform: rotate(90deg);
+}
+
+/* Mobile Menu Content */
+.mobile-menu-content {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+}
+
+/* Mobile Links Section */
+.mobile-links-section {
+    margin-bottom: 30px;
+}
+
+.mobile-nav-link {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    color: white;
+    text-decoration: none;
+    padding: 18px 20px;
+    margin-bottom: 10px;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid transparent;
+}
+
+.mobile-nav-link:hover {
+    background: rgba(236, 173, 41, 0.1);
+    border-color: rgba(236, 173, 41, 0.3);
+    transform: translateX(5px);
+    color: #ecad29;
+}
+
+.mobile-link-icon {
+    font-size: 1.2rem;
+    width: 30px;
+    text-align: center;
+}
+
+.mobile-link-text {
+    font-size: 1rem;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    font-family: "Cormorant Garamond", serif;
+    flex: 1;
+}
+
+/* Mobile Categories Toggle */
+.mobile-categories-toggle {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 15px;
+    color: white;
+    padding: 18px 20px;
+    margin-bottom: 10px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    background: rgba(236, 173, 41, 0.1);
+    border: 1px solid rgba(236, 173, 41, 0.3);
+}
+
+.mobile-categories-toggle.active,
+.mobile-categories-toggle:hover {
+    background: rgba(236, 173, 41, 0.2);
+    color: #ecad29;
+}
+
+.mobile-toggle-arrow {
+    font-size: 0.9rem;
+    transition: transform 0.3s ease;
+}
+
+/* Mobile Categories Dropdown - Always Visible */
+.mobile-categories-dropdown {
+    background: rgba(0, 0, 0, 0.9);
+    border: 1px solid rgba(236, 173, 41, 0.2);
+    border-radius: 8px;
+    margin: 15px 0;
+    padding: 0;
+    overflow: visible;
+    animation: slideDown 0.3s ease forwards;
+}
+
+@keyframes slideDown {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.mobile-categories-header {
+    padding: 20px;
+    border-bottom: 1px solid rgba(236, 173, 41, 0.2);
+    text-align: center;
+}
+
+.mobile-categories-header h3 {
+    color: #ecad29;
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin: 0 0 5px 0;
+    font-family: "Playfair Display", serif;
+}
+
+.mobile-categories-header p {
+    color: rgba(255, 255, 255, 0.7);
+    font-size: 0.8rem;
+    margin: 0;
+    font-family: "Cormorant Garamond", serif;
+}
+
+.mobile-categories-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 12px;
+    padding: 20px;
+}
+
+.mobile-category-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: white;
+    text-decoration: none;
+    padding: 20px 15px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 8px;
+    transition: all 0.3s ease;
+    background: rgba(255, 255, 255, 0.05);
+    min-height: 100px;
+}
+
+.mobile-category-card:hover {
+    background: rgba(236, 173, 41, 0.15);
+    border-color: rgba(236, 173, 41, 0.4);
+    transform: translateY(-3px);
+    color: #ecad29;
+}
+
+.mobile-category-icon {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+}
+
+.mobile-category-name {
+    font-size: 0.85rem;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    font-family: "Cormorant Garamond", serif;
+    line-height: 1.2;
+}
+
+/* Mobile Auth Section */
+.mobile-auth-section {
+    background: rgba(236, 173, 41, 0.1);
+    border: 1px solid rgba(236, 173, 41, 0.2);
+    border-radius: 8px;
+    padding: 20px;
+    margin: 20px 0;
+    text-align: center;
+}
+
+.mobile-user-info {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    color: white;
+    margin-bottom: 15px;
+    font-family: "Cormorant Garamond", serif;
+    font-size: 1rem;
+}
+
+.user-icon {
+    font-size: 1.2rem;
+}
+
+.mobile-login-btn,
+.mobile-logout-btn {
+    width: 100%;
+    padding: 14px;
+    border: none;
+    border-radius: 6px;
+    font-size: 1rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-family: "Cormorant Garamond", serif;
+    letter-spacing: 1px;
+}
+
+.mobile-login-btn {
+    background: linear-gradient(135deg, #ecad29 0%, #f7c948 100%);
+    color: black;
+}
+
+.mobile-login-btn:hover {
+    background: linear-gradient(135deg, #f7c948 0%, #ffd700 100%);
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(236, 173, 41, 0.3);
+}
+
+.mobile-logout-btn {
+    background: rgba(255, 255, 255, 0.1);
+    color: white;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.mobile-logout-btn:hover {
+    background: rgba(255, 255, 255, 0.2);
+}
+
+/* HAMBURGER */
+.hamburger {
+    display: none;
+    flex-direction: column;
+    gap: 6px;
+    cursor: pointer;
+    z-index: 1100;
+    padding: 5px;
+}
+
+.bar {
+    width: 30px;
+    height: 2px;
+    background: white;
+    transition: 0.3s;
+}
+
+.hamburger.open .bar:nth-child(1) {
+    transform: rotate(45deg) translate(6px, 6px);
+}
+
+.hamburger.open .bar:nth-child(2) {
+    opacity: 0;
+}
+
+.hamburger.open .bar:nth-child(3) {
+    transform: rotate(-45deg) translate(6px, -6px);
+}
+
+/* RESPONSIVE */
+@media (max-width: 992px) {
+    .navbar-links-desktop {
+        display: none;
+    }
+    .hamburger {
+        display: flex;
+    }
+
+    .navbar1 {
+        padding: 15px 5%;
+    }
+
+    .navbar1.scrolled {
+        padding: 10px 5%;
+    }
+}
+
+@media (max-width: 768px) {
+    .categories-dropdown {
+        width: 350px;
+        left: -150px;
+    }
+
+    .categories-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .mobile-categories-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 480px) {
+    .srikanth {
+        font-size: 1.3rem;
+    }
+
+    .jewellery-text {
+        font-size: 0.6rem;
+        letter-spacing: 2px;
+    }
+
+    .mobile-categories-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .mobile-menu-header {
+        padding: 20px 15px;
+    }
+
+    .mobile-nav-link {
+        padding: 16px 15px;
+    }
+
+    .mobile-link-text {
+        font-size: 0.95rem;
+    }
+}
+
+/* Add font imports */
+@import url("https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Cormorant+Garamond:wght@300;400;600;700&display=swap");
