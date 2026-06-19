@@ -45,7 +45,6 @@ function Navbar() {
 
     useEffect(() => {
         let ticking = false;
-        let lastScrollY = window.scrollY;
 
         const handleScroll = () => {
             if (!ticking) {
@@ -60,12 +59,13 @@ function Navbar() {
 
                     scrollTimeoutRef.current = setTimeout(() => {
                         setIsVisible(true);
-                    }, 1000); 
+                    }, 1000);
+
                     setScrolled(currentScrollY > 20);
 
-                    lastScrollY = currentScrollY;
                     ticking = false;
                 });
+
                 ticking = true;
             }
         };
@@ -73,7 +73,7 @@ function Navbar() {
         const checkTopPosition = () => {
             if (window.scrollY < 50) {
                 setIsVisible(true);
-                // Clear timeout when at top
+
                 if (scrollTimeoutRef.current) {
                     clearTimeout(scrollTimeoutRef.current);
                 }
@@ -86,6 +86,7 @@ function Navbar() {
         return () => {
             window.removeEventListener("scroll", handleScroll);
             window.removeEventListener("scroll", checkTopPosition);
+
             if (scrollTimeoutRef.current) {
                 clearTimeout(scrollTimeoutRef.current);
             }
