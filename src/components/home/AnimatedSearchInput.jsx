@@ -28,7 +28,6 @@ function AnimatedSearchInput() {
         const currentTerm = searchTerms[currentTermIndex];
 
         if (isDeleting) {
-            // Delete character
             if (displayText === prefix) {
                 setIsDeleting(false);
                 setIsPaused(true);
@@ -42,7 +41,6 @@ function AnimatedSearchInput() {
 
             setDisplayText((prev) => prev.slice(0, -1));
         } else {
-            // Type character
             if (displayText.length === prefix.length + currentTerm.length) {
                 setIsDeleting(true);
                 setIsPaused(true);
@@ -70,7 +68,6 @@ function AnimatedSearchInput() {
     }, [animate, isDeleting]);
 
     const handleFocus = () => {
-        // Optional: Pause animation on focus
         setIsPaused(true);
     };
 
@@ -82,7 +79,6 @@ function AnimatedSearchInput() {
 
     const handleSearch = (e) => {
         e.preventDefault();
-        // Handle search functionality
         console.log("Searching for:", displayText.replace(prefix, ""));
     };
 

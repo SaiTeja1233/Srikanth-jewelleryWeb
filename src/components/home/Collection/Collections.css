@@ -1,6 +1,5 @@
-/* Collections.css */
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Cormorant+Garamond:wght@300;400;600;700&display=swap');
 
-/* Container */
 .collections-container {
     padding: 0 8%;
     max-width: 1400px;
@@ -9,7 +8,6 @@
     padding-bottom: 80px;
 }
 
-/* Header Section */
 .collections-header {
     text-align: center;
     margin-bottom: 60px;
@@ -58,7 +56,6 @@
     margin: 0 auto;
 }
 
-/* Featured Collections */
 .featured-collections {
     margin-bottom: 80px;
 }
@@ -165,7 +162,6 @@
     transform: translateX(5px);
 }
 
-/* All Collections */
 .all-collections {
     margin-bottom: 80px;
 }
@@ -204,7 +200,6 @@
     border-color: #D4AF37;
 }
 
-/* Collections Grid */
 .collections-grid {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
@@ -357,7 +352,6 @@
     box-shadow: 0 5px 15px rgba(212, 175, 55, 0.3);
 }
 
-/* Call to Action */
 .collections-cta {
     background: linear-gradient(135deg, #1a1a1a 0%, #2d2d2d 100%);
     border-radius: 20px;
@@ -366,143 +360,3 @@
     position: relative;
     overflow: hidden;
 }
-
-.collections-cta::before {
-    content: '';
-    position: absolute;
-    top: -50%;
-    right: -50%;
-    width: 200px;
-    height: 200px;
-    background: radial-gradient(circle, rgba(212, 175, 55, 0.1) 0%, transparent 70%);
-}
-
-.cta-content {
-    position: relative;
-    z-index: 2;
-    max-width: 600px;
-    margin: 0 auto;
-}
-
-.cta-title {
-    font-family: 'Playfair Display', serif;
-    font-size: 2.2rem;
-    font-weight: 700;
-    color: white;
-    margin-bottom: 20px;
-}
-
-.cta-text {
-    font-family: 'Cormorant Garamond', serif;
-    font-size: 1.1rem;
-    color: rgba(255, 255, 255, 0.9);
-    margin-bottom: 30px;
-    line-height: 1.6;
-}
-
-.cta-btn {
-    padding: 16px 40px;
-    background: linear-gradient(135deg, #D4AF37 0%, #F7C948 100%);
-    border: none;
-    border-radius: 8px;
-    color: black;
-    font-family: 'Cormorant Garamond', serif;
-    font-size: 1.1rem;
-    font-weight: 700;
-    cursor: pointer;
-    transition: all 0.3s ease;
-    display: inline-flex;
-    align-items: center;
-    gap: 10px;
-}
-
-.cta-btn:hover {
-    transform: translateY(-3px);
-    box-shadow: 0 10px 25px rgba(212, 175, 55, 0.4);
-}
-
-/* Responsive Design */
-@media (max-width: 1200px) {
-    .collections-grid {
-        grid-template-columns: repeat(3, 1fr);
-    }
-    
-    .featured-grid {
-        gap: 20px;
-    }
-}
-
-@media (max-width: 992px) {
-    .collections-container {
-        padding: 80px 5% 60px;
-    }
-    
-    .collections-title {
-        font-size: 2.8rem;
-    }
-    
-    .featured-grid {
-        grid-template-columns: repeat(2, 1fr);
-    }
-    
-    .collections-grid {
-        grid-template-columns: repeat(2, 1fr);
-    }
-    
-    .collections-top-bar {
-        flex-direction: column;
-        gap: 20px;
-        align-items: flex-start;
-    }
-    
-    .filter-options {
-        flex-wrap: wrap;
-    }
-}
-
-@media (max-width: 768px) {
-    .collections-title {
-        font-size: 2.2rem;
-    }
-    
-    .section-title {
-        font-size: 2rem;
-    }
-    
-    .featured-grid {
-        grid-template-columns: 1fr;
-    }
-    
-    .featured-card {
-        height: 350px;
-    }
-    
-    .collections-cta {
-        padding: 40px 20px;
-    }
-    
-    .cta-title {
-        font-size: 1.8rem;
-    }
-}
-
-@media (max-width: 576px) {
-    .collections-grid {
-        grid-template-columns: 1fr;
-    }
-    
-    .collection-card {
-        height: 320px;
-    }
-    
-    .featured-name {
-        font-size: 1.5rem;
-    }
-    
-    .collection-name {
-        font-size: 1.2rem;
-    }
-}
-
-/* Add font imports */
-@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Cormorant+Garamond:wght@300;400;600;700&display=swap');

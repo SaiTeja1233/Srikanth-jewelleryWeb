@@ -6,16 +6,13 @@ function BottomNav() {
     const [isMobile, setIsMobile] = useState(false);
     const scrollTimeoutRef = React.useRef(null);
 
-    // Check if screen is mobile
     useEffect(() => {
         const checkIsMobile = () => {
-            setIsMobile(window.innerWidth <= 992); // Same breakpoint as navbar
+            setIsMobile(window.innerWidth <= 992); 
         };
 
-        // Check on mount
         checkIsMobile();
 
-        // Add resize listener
         window.addEventListener("resize", checkIsMobile);
 
         return () => {
@@ -23,27 +20,23 @@ function BottomNav() {
         };
     }, []);
 
-    // Effect for handling scroll behavior
     useEffect(() => {
-        if (!isMobile) return; // Only run scroll logic on mobile
+        if (!isMobile) return; 
 
         let ticking = false;
 
         const handleScroll = () => {
             if (!ticking) {
                 window.requestAnimationFrame(() => {
-                    // Hide bottom nav immediately when scrolling starts
                     setIsVisible(false);
 
-                    // Clear any existing timeout
                     if (scrollTimeoutRef.current) {
                         clearTimeout(scrollTimeoutRef.current);
                     }
 
-                    // Set timeout to show bottom nav 1 SECOND after scrolling stops
                     scrollTimeoutRef.current = setTimeout(() => {
                         setIsVisible(true);
-                    }, 1000); // 1000ms = 1 second delay
+                    }, 1000); 
 
                     ticking = false;
                 });
@@ -51,11 +44,9 @@ function BottomNav() {
             }
         };
 
-        // Show bottom nav immediately when at the top
         const checkTopPosition = () => {
             if (window.scrollY < 50) {
                 setIsVisible(true);
-                // Clear timeout when at top
                 if (scrollTimeoutRef.current) {
                     clearTimeout(scrollTimeoutRef.current);
                 }
@@ -65,7 +56,6 @@ function BottomNav() {
         window.addEventListener("scroll", handleScroll, { passive: true });
         window.addEventListener("scroll", checkTopPosition, { passive: true });
 
-        // Cleanup on unmount
         return () => {
             window.removeEventListener("scroll", handleScroll);
             window.removeEventListener("scroll", checkTopPosition);
@@ -73,9 +63,8 @@ function BottomNav() {
                 clearTimeout(scrollTimeoutRef.current);
             }
         };
-    }, [isMobile]); // Re-run when isMobile changes
+    }, [isMobile]); 
 
-    // Don't render on desktop
     if (!isMobile) {
         return null;
     }

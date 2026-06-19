@@ -49,7 +49,6 @@ const data = [
     },
 ];
 
-// Jewellery collections data
 const jewelleryCollections = [
     {
         id: 1,
@@ -93,7 +92,6 @@ const jewelleryCollections = [
     },
 ];
 
-// Debounce function for resize events
 const debounce = (func, wait) => {
     let timeout;
     return function executedFunction(...args) {
@@ -118,7 +116,6 @@ function HomePage() {
     const isRunning = useRef(true);
     const navigate = useNavigate();
 
-    // Preload images for better performance
     const preloadImages = () => {
         const imageUrls = data.map((item) => item.image);
         imageUrls.forEach((src) => {
@@ -134,18 +131,16 @@ function HomePage() {
             cardWidth: isMobile ? 90 : 200,
             cardHeight: isMobile ? 130 : 200,
             gap: isMobile ? 10 : 30,
-            bottomOffset: isMobile ? 200 : 250, // Adjusted for better positioning
+            bottomOffset: isMobile ? 200 : 250, 
             rightOffset: isMobile ? 310 : 700,
-            transitionSpeed: 0.8, // Reduced from 1.2 for smoother animation
+            transitionSpeed: 0.8, 
             waitDuration: 4,
         };
     };
 
     useEffect(() => {
-        // Preload images on mount
         preloadImages();
 
-        // Show jewellery section after a delay
         const timer = setTimeout(() => {
             setShowJewellery(true);
         }, 800);
@@ -162,7 +157,6 @@ function HomePage() {
             const [active, ...rest] = orderRef.current;
             const { innerHeight: height, innerWidth: width } = window;
 
-            // Use immediateRender for initial setup
             gsap.set(`#card${active}`, {
                 x: 0,
                 y: 0,
@@ -210,13 +204,11 @@ function HomePage() {
 
                     const { innerHeight: height, innerWidth: width } = window;
 
-                    // Simplified timeline with fewer simultaneous animations
                     const tl = gsap.timeline({
                         onComplete: resolve,
                         defaults: { ease: "power2.inOut", overwrite: "auto" },
                     });
 
-                    // Only animate what's necessary
                     tl.to(
                         `#card${newActive}`,
                         {
@@ -250,7 +242,6 @@ function HomePage() {
                         0.5,
                     );
 
-                    // Reset previous active card position
                     const xLast =
                         width -
                         config.rightOffset +
@@ -270,7 +261,6 @@ function HomePage() {
                         "-=0.4",
                     );
 
-                    // Animate other cards
                     rest.forEach((i, index) => {
                         if (i !== prevActive) {
                             tl.to(
@@ -290,7 +280,6 @@ function HomePage() {
             };
 
             async function startLoop() {
-                // Small delay before starting loop
                 await gsap.to({}, { duration: 0.5 });
 
                 while (isRunning.current) {
@@ -313,7 +302,6 @@ function HomePage() {
 
             init();
 
-            // Simplified cover animation
             gsap.to(".cover", {
                 x: window.innerWidth + 400,
                 duration: 0.8,
@@ -322,7 +310,6 @@ function HomePage() {
             });
         }, containerRef);
 
-        // Debounced resize handler
         const handleResize = debounce(() => {
             gsap.killTweensOf(".card");
             init();
@@ -357,7 +344,6 @@ function HomePage() {
 
     return (
         <div className="homeMain">
-            {/* Hero Section */}
             <div className="timed-cards-container" ref={containerRef}>
                 <div className="indicator" ref={indicatorRef}></div>
                 <div id="demo">
@@ -418,7 +404,6 @@ function HomePage() {
                 />
             </div>
 
-            {/* Jewellery Collections Section */}
             {showJewellery && (
                 <div className="jewellery-home-section">
                     <div className="container">
@@ -434,7 +419,7 @@ function HomePage() {
                         <div className="jewellery-home-grid">
                             {jewelleryCollections.slice(0, 4).map(
                                 (
-                                    item, // Show only 4 items for mobile
+                                    item, 
                                 ) => (
                                     <div
                                         key={item.id}
@@ -459,7 +444,6 @@ function HomePage() {
                                                         "center",
                                                 }}
                                             >
-                                                {/* Removed badges */}
                                                 <div
                                                     className={`jewellery-overlay ${hoveredJewellery === item.id ? "show" : ""}`}
                                                 >
@@ -478,7 +462,6 @@ function HomePage() {
                                                 {item.description}
                                             </p>
                                             <div className="jewellery-home-footer">
-                                                {/* Removed price section */}
                                                 <button
                                                     className="jewellery-explore-btn"
                                                     onClick={(e) => {
@@ -510,7 +493,6 @@ function HomePage() {
                 </div>
             )}
 
-            {/* Horizontal Image Banner with Left-side Dark Background */}
             <div className="horizontal-banner-section">
                 <div className="horizontal-banner-image">
                     <img
@@ -536,7 +518,6 @@ function HomePage() {
                 </div>
             </div>
 
-            {/* Srikanth Jewellery Promo Video Section */}
             <div className="jewellery-promo-section">
                 <div className="container">
                     <div className="promo-content-wrapper">

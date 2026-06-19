@@ -88,7 +88,6 @@ const Collections = () => {
         },
     ];
 
-    // Featured collections for top section
     const featuredCollections = collections.slice(0, 3);
 
     return (
@@ -110,7 +109,6 @@ const Collections = () => {
                 </div>
             </div>
 
-            {/* Featured Collections */}
             <div className="featured-collections">
                 <h2 className="section-title">Featured Collections</h2>
                 <p className="section-subtitle">
@@ -156,7 +154,6 @@ const Collections = () => {
                 </div>
             </div>
 
-            {/* All Collections Grid */}
             <div className="all-collections">
                 <div className="collections-top-bar">
                     <h2 className="section-title">All Collections</h2>
@@ -234,7 +231,6 @@ const Collections = () => {
                 </div>
             </div>
 
-            {/* Call to Action */}
             <div className="collections-cta">
                 <div className="cta-content">
                     <h2 className="cta-title">Looking for Custom Designs?</h2>

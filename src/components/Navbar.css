@@ -1,8 +1,5 @@
-
-
-
 .navbar1 {
-    position: fixed; 
+    position: fixed; /* Keep it sticky at the top */
     top: 0;
     left: 0;
     width: 100%;
@@ -16,13 +13,11 @@
     opacity: 1;
 }
 
-
 .navbar1.hidden {
     transform: translateY(-100%);
     opacity: 0;
     pointer-events: none;
 }
-
 
 .navbar1.visible {
     transform: translateY(0);
@@ -38,7 +33,6 @@
     -webkit-backdrop-filter: blur(15px);
 }
 
-
 .navbar-links-mobile.open {
     right: 0 !important;
     pointer-events: all !important;
@@ -52,7 +46,6 @@
     justify-content: space-between;
     align-items: center;
 }
-
 
 .logo-name {
     display: flex;
@@ -76,7 +69,6 @@
     letter-spacing: 3px;
     font-family: "Cormorant Garamond", serif;
 }
-
 
 .navbar-links-desktop {
     display: flex;
@@ -106,7 +98,6 @@
 .navbar-links li a:hover {
     color: #ecad29;
 }
-
 
 .categories-item {
     position: relative;
@@ -202,7 +193,6 @@
     flex: 1;
 }
 
-
 .navbar-auth {
     margin-left: 10px;
 }
@@ -237,7 +227,6 @@
     background: rgba(255, 255, 255, 0.1);
 }
 
-
 .navbar-links-mobile {
     position: fixed;
     top: 0;
@@ -255,7 +244,6 @@
 .navbar-links-mobile.open {
     right: 0;
 }
-
 
 .mobile-menu-header {
     display: flex;
@@ -303,14 +291,12 @@
     transform: rotate(90deg);
 }
 
-
 .mobile-menu-content {
     flex: 1;
     display: flex;
     flex-direction: column;
     padding: 20px;
 }
-
 
 .mobile-links-section {
     margin-bottom: 30px;
@@ -352,7 +338,6 @@
     flex: 1;
 }
 
-
 .mobile-categories-toggle {
     display: flex;
     align-items: center;
@@ -378,7 +363,6 @@
     font-size: 0.9rem;
     transition: transform 0.3s ease;
 }
-
 
 .mobile-categories-dropdown {
     background: rgba(0, 0, 0, 0.9);
@@ -467,7 +451,6 @@
     line-height: 1.2;
 }
 
-
 .mobile-auth-section {
     background: rgba(236, 173, 41, 0.1);
     border: 1px solid rgba(236, 173, 41, 0.2);
@@ -528,7 +511,6 @@
     background: rgba(255, 255, 255, 0.2);
 }
 
-
 .hamburger {
     display: none;
     flex-direction: column;
@@ -556,7 +538,6 @@
 .hamburger.open .bar:nth-child(3) {
     transform: rotate(-45deg) translate(6px, -6px);
 }
-
 
 @media (max-width: 992px) {
     .navbar-links-desktop {

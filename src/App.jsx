@@ -10,7 +10,6 @@ function App() {
     const [loading, setLoading] = useState(true);
 
     useEffect(() => {
-        // Simulate initial loading
         const timer = setTimeout(() => {
             setLoading(false);
         }, 800);
@@ -85,7 +84,6 @@ function App() {
     );
 }
 
-// Helper Components
 function PlaceholderPage({ title }) {
     return (
         <div className="container py-16">

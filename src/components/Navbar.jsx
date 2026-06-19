@@ -16,7 +16,6 @@ function Navbar() {
     const scrollTimeoutRef = useRef(null);
     const navigate = useNavigate();
 
-    // Categories data
     const categories = [
         { name: "Gold Collection", slug: "gold" },
         { name: "Diamond Collection", slug: "diamond" },
@@ -44,7 +43,6 @@ function Navbar() {
         setShowMobileCategories(!showMobileCategories);
     };
 
-    // Effect for handling scroll behavior
     useEffect(() => {
         let ticking = false;
         let lastScrollY = window.scrollY;
@@ -54,20 +52,15 @@ function Navbar() {
                 window.requestAnimationFrame(() => {
                     const currentScrollY = window.scrollY;
 
-                    // Hide navbar immediately when scrolling starts
                     setIsVisible(false);
 
-                    // Clear any existing timeout
                     if (scrollTimeoutRef.current) {
                         clearTimeout(scrollTimeoutRef.current);
                     }
 
-                    // Set timeout to show navbar 1 SECOND after scrolling stops
                     scrollTimeoutRef.current = setTimeout(() => {
                         setIsVisible(true);
-                    }, 1000); // 1000ms = 1 second delay
-
-                    // Update scrolled state for background change
+                    }, 1000); 
                     setScrolled(currentScrollY > 20);
 
                     lastScrollY = currentScrollY;
@@ -77,7 +70,6 @@ function Navbar() {
             }
         };
 
-        // Show navbar immediately when at the top
         const checkTopPosition = () => {
             if (window.scrollY < 50) {
                 setIsVisible(true);
@@ -91,7 +83,6 @@ function Navbar() {
         window.addEventListener("scroll", handleScroll, { passive: true });
         window.addEventListener("scroll", checkTopPosition, { passive: true });
 
-        // Cleanup on unmount
         return () => {
             window.removeEventListener("scroll", handleScroll);
             window.removeEventListener("scroll", checkTopPosition);
@@ -101,7 +92,6 @@ function Navbar() {
         };
     }, []);
 
-    // Effect for closing menus on outside click
     useEffect(() => {
         const handleOutsideClick = (event) => {
             // Close mobile menu
@@ -115,7 +105,6 @@ function Navbar() {
                 setShowMobileCategories(false);
             }
 
-            // Close desktop categories dropdown
             if (
                 categoriesRef.current &&
                 !categoriesRef.current.contains(event.target)
@@ -142,7 +131,6 @@ function Navbar() {
                     </div>
                 </div>
 
-                {/* Desktop Navigation */}
                 <div className="navbar-links-desktop">
                     <ul className="navbar-links">
                         <li>
@@ -152,7 +140,6 @@ function Navbar() {
                             <Link to="/about">About</Link>
                         </li>
 
-                        {/* Categories Dropdown */}
                         <li
                             className="categories-item"
                             ref={categoriesRef}
@@ -163,7 +150,6 @@ function Navbar() {
                                 Categories ▾
                             </span>
 
-                            {/* Categories Dropdown Menu */}
                             {showCategories && (
                                 <div className="categories-dropdown">
                                     <h3 className="dropdown-title">
@@ -200,7 +186,6 @@ function Navbar() {
                         </li>
                     </ul>
 
-                    {/* Desktop Login */}
                     <div className="navbar-auth">
                         {isLoggedIn ? (
                             <button
@@ -220,7 +205,6 @@ function Navbar() {
                     </div>
                 </div>
 
-                {/* Mobile Hamburger */}
                 <div
                     className={`hamburger ${isMenuOpen ? "open" : ""}`}
                     onClick={toggleMenu}
@@ -232,12 +216,10 @@ function Navbar() {
                 </div>
             </div>
 
-            {/* Mobile Menu Overlay */}
             <div
                 className={`navbar-links-mobile ${isMenuOpen ? "open" : ""}`}
                 ref={menuRef}
             >
-                {/* Mobile Menu Content */}
                 <div className="mobile-menu-content">
                     <div className="mobile-links-section">
                         <Link
@@ -276,7 +258,6 @@ function Navbar() {
                             </span>
                         </Link>
 
-                        {/* Mobile Categories Toggle */}
                         <div
                             className={`mobile-categories-toggle ${showMobileCategories ? "active" : ""}`}
                             onClick={toggleMobileCategories}
@@ -289,7 +270,6 @@ function Navbar() {
                             </span>
                         </div>
 
-                        {/* Mobile Categories Dropdown - Always Visible When Expanded */}
                         {showMobileCategories && (
                             <div className="mobile-categories-dropdown">
                                 <div className="mobile-categories-header">

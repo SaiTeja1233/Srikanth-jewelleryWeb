@@ -89,16 +89,16 @@
     .bottom-nav {
         padding: 8px 0;
     }
-    
+
     .bottom-nav-item {
         padding: 6px 8px;
     }
-    
+
     .bottom-nav-item svg {
         width: 22px;
         height: 22px;
     }
-    
+
     .bottom-nav-item span {
         font-size: 0.65rem;
     }
@@ -108,16 +108,16 @@
     .bottom-nav {
         padding: 6px 0;
     }
-    
+
     .bottom-nav-item {
         padding: 5px 6px;
     }
-    
+
     .bottom-nav-item svg {
         width: 20px;
         height: 20px;
     }
-    
+
     .bottom-nav-item span {
         font-size: 0.6rem;
         letter-spacing: 0.3px;
@@ -128,7 +128,7 @@
     .bottom-nav-item span {
         font-size: 0.55rem;
     }
-    
+
     .bottom-nav-item svg {
         width: 18px;
         height: 18px;
